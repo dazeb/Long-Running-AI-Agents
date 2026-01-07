@@ -1,166 +1,89 @@
 # Claude AI Agents Collection
 
-A comprehensive library of 34 specialized AI agent role definitions for software development studios, covering the entire software development lifecycle from design to deployment.
+A comprehensive library of **35 specialized AI agent role definitions** for modern software development studios. This collection is optimized for **Claude 4.x (Sonnet/Opus 4.5)** and implements the latest industry best practices for **"Long-Running Agents"**.
 
-## Overview
+## 🧠 Philosophy: Why Build Agents Like This?
 
-This collection provides detailed role definitions for AI agents that can assist with various aspects of running a modern software development studio. Each agent is specialized for a specific domain and includes comprehensive guidance on capabilities, tools, workflows, and best practices.
+Standard AI agents often fail on complex tasks because they try to "one-shot" the entire problem. As tasks grow in complexity, they exceed the model's context window, leading to:
+1. **Context Loss**: The model forgets initial requirements or architectural decisions as the conversation grows.
+2. **Implementation Fatigue**: Code quality degrades as the session context becomes cluttered.
+3. **Broken Handoffs**: New sessions start with no memory, forcing the agent to waste tokens and time "rediscovering" the project.
 
-All agents are designed to work collaboratively, with clear interfaces for how they receive inputs from and provide outputs to other agents in the ecosystem.
+**Our Approach** solves this by treating development as a series of **atomic, stateful sessions**. We use a two-agent harness based on Anthropic's research:
+- **The Initializer**: Spends its entire context window planning, scaffolding, and creating a machine-readable roadmap (`tests.json`).
+- **The Worker**: Focused, incremental sessions that implement exactly one feature, verify it end-to-end, and persist the state for the next session.
 
-## Repository Structure
+## 🔄 How Long-Running Agents Work
 
+```mermaid
+graph TD
+    subgraph "Phase 1: Environment Architecture"
+    A[User Prompt] --> B[Project Initializer Agent]
+    B --> C["Roadmap (tests.json)"]
+    B --> D["Infrastructure (init.sh)"]
+    B --> E["Memory (progress.txt)"]
+    end
+
+    subgraph "Phase 2: The Cognitive Loop"
+    C & D & E --> F[Worker Agent Session]
+    F --> G["Orient: Read progress + git log"]
+    G --> H["Execute: Run init.sh + test baseline"]
+    H --> I["Build: Implement 1 feature"]
+    I --> J["Verify: Run E2E Tests"]
+    J --> K["Persist: Update state + Git commit"]
+    end
+
+    K -- "Next Feature" --> F
+    K -- "Complete" --> L[Project Delivered]
 ```
-.claude/agents/
-├── design/              # 5 agents - Visual design and user experience
-├── engineering/         # 6 agents - Software development and architecture
-├── marketing/           # 7 agents - Growth, content, and community
-├── product/             # 3 agents - Product strategy and prioritization
-├── project-management/  # 3 agents - Portfolio and release coordination
-├── studio-operations/   # 5 agents - Finance, legal, support, and infrastructure
-└── testing/             # 5 agents - Quality assurance and workflow optimization
-```
 
-## Agent Categories
+## 📂 Agent Directory
 
-### 🎨 Design (5 agents)
+Click an agent name to view its full role definition, capabilities, and anti-patterns.
 
-Design agents focus on creating cohesive, accessible, and delightful user experiences.
+| Engineering | Design | Product |
+| :--- | :--- | :--- |
+| [🏗️ Project Initializer](.claude/agents/engineering/project-initializer.md) | [🎨 Brand Guardian](.claude/agents/design/brand-guardian.md) | [📊 Sprint Prioritizer](.claude/agents/product/sprint-prioritizer.md) |
+| [🤖 AI & LLM Engineer](.claude/agents/engineering/ai-engineer.md) | [🍱 UI Designer](.claude/agents/design/ui-designer.md) | [💡 Feedback Synthesizer](.claude/agents/product/feedback-synthesizer.md) |
+| [🏛️ Backend Architect](.claude/agents/engineering/backend-architect.md) | [🔍 UX Researcher](.claude/agents/design/ux-researcher.md) | [📈 Trend Researcher](.claude/agents/product/trend-researcher.md) |
+| [🚀 DevOps Automator](.claude/agents/engineering/devops-automator.md) | [🖼️ Visual Storyteller](.claude/agents/design/visual-storyteller.md) | |
+| [💻 Frontend Developer](.claude/agents/engineering/frontend-developer.md) | [✨ Whimsy Injector](.claude/agents/design/whimsy-injector.md) | |
+| [📱 Mobile App Builder](.claude/agents/engineering/mobile-app-builder.md) | | |
+| [⚡ Rapid Prototyper](.claude/agents/engineering/rapid-prototyper.md) | | |
 
-- **[Brand Guardian](/.claude/agents/design/brand-guardian.md)** - Maintains brand consistency across all touchpoints
-- **[UI Designer](/.claude/agents/design/ui-designer.md)** - Crafts user interfaces from wireframes to production-ready components
-- **[UX Researcher](/.claude/agents/design/ux-researcher.md)** - Validates designs through user research and testing
-- **[Visual Storyteller](/.claude/agents/design/visual-storyteller.md)** - Creates illustrations, infographics, and data visualizations
-- **[Whimsy Injector](/.claude/agents/design/whimsy-injector.md)** - Adds delightful micro-interactions and personality
+| Marketing | Operations | Testing |
+| :--- | :--- | :--- |
+| [✍️ Content Creator](.claude/agents/marketing/content-creator.md) | [📈 Analytics Reporter](.claude/agents/studio-operations/analytics-reporter.md) | [🧪 API Tester](.claude/agents/testing/api-tester.md) |
+| [📈 Growth Hacker](.claude/agents/marketing/growth-hacker.md) | [💰 Finance Tracker](.claude/agents/studio-operations/finance-tracker.md) | [🏎️ Perf Benchmarker](.claude/agents/testing/performance-benchmarker.md) |
+| [📱 ASO Specialist](.claude/agents/marketing/app-store-optimizer.md) | [🛠️ Infra Maintainer](.claude/agents/studio-operations/infrastructure-maintainer.md) | [📉 Results Analyzer](.claude/agents/testing/test-results-analyzer.md) |
+| [📸 Instagram Curator](.claude/agents/marketing/instagram-curator.md) | [⚖️ Legal & Compliance](.claude/agents/studio-operations/legal-compliance-checker.md) | [🔧 Tool Evaluator](.claude/agents/testing/tool-evaluator.md) |
+| [🤖 Reddit Builder](.claude/agents/marketing/reddit-community-builder.md) | [🎧 Support Responder](.claude/agents/studio-operations/support-responder.md) | [⚙️ Workflow Optimizer](.claude/agents/testing/workflow-optimizer.md) |
+| [🎥 TikTok Strategist](.claude/agents/marketing/tiktok-strategist.md) | | |
+| [🐦 Twitter Engager](.claude/agents/marketing/twitter-engager.md) | | |
 
-### 💻 Engineering (6 agents)
+| Project Management |
+| :--- |
+| [🔬 Experiment Tracker](.claude/agents/project-management/experiment-tracker.md) |
+| [📦 Project Shipper](.claude/agents/project-management/project-shipper.md) |
+| [🎬 Studio Producer](.claude/agents/project-management/studio-producer.md) |
 
-Engineering agents handle the technical implementation and architecture of software systems.
+## 🛠️ The Working Environment
 
-- **[AI Engineer](/.claude/agents/engineering/ai-engineer.md)** - Integrates LLMs, RAG systems, and AI capabilities
-- **[Backend Architect](/.claude/agents/engineering/backend-architect.md)** - Designs APIs, databases, and server-side architecture
-- **[DevOps Automator](/.claude/agents/engineering/devops-automator.md)** - Manages CI/CD, infrastructure, and deployments
-- **[Frontend Developer](/.claude/agents/engineering/frontend-developer.md)** - Builds responsive web applications with modern frameworks
-- **[Mobile App Builder](/.claude/agents/engineering/mobile-app-builder.md)** - Develops cross-platform mobile applications
-- **[Rapid Prototyper](/.claude/agents/engineering/rapid-prototyper.md)** - Builds MVPs and proof-of-concepts quickly
+To ensure agents work effectively across many context windows, we maintain three "Source of Truth" artifacts:
 
-### 📣 Marketing (7 agents)
+1.  **`tests.json` (The Roadmap)**: A structured JSON file containing 50-200+ micro-features. It is **immutable** (descriptions never change). Agents only update the `passes: true/false` field.
+2.  **`init.sh` (The Engine)**: A shell script that automatically installs dependencies, starts dev servers, and runs baseline tests. This eliminates "setup toil" at the start of every session.
+3.  **`claude-progress.txt` (The Memory)**: A freeform log where agents record *why* decisions were made, helping the next agent understand the "spirit" of the code.
 
-Marketing agents drive user acquisition, engagement, and retention across multiple channels.
+## ✨ Claude 4.5 Optimizations
 
-- **[App Store Optimizer](/.claude/agents/marketing/app-store-optimizer.md)** - Optimizes app store presence and conversion
-- **[Content Creator](/.claude/agents/marketing/content-creator.md)** - Writes SEO-optimized long-form content
-- **[Growth Hacker](/.claude/agents/marketing/growth-hacker.md)** - Runs experiments to optimize acquisition funnels
-- **[Instagram Curator](/.claude/agents/marketing/instagram-curator.md)** - Manages Instagram strategy and content
-- **[Reddit Community Builder](/.claude/agents/marketing/reddit-community-builder.md)** - Builds authentic communities on Reddit
-- **[TikTok Strategist](/.claude/agents/marketing/tiktok-strategist.md)** - Creates viral short-form video content
-- **[Twitter Engager](/.claude/agents/marketing/twitter-engager.md)** - Builds thought leadership and engagement on Twitter
+These agents are specifically tuned for the unique capabilities of the Claude 4.5 model family:
 
-### 📦 Product (3 agents)
-
-Product agents synthesize user feedback, market research, and strategic priorities.
-
-- **[Feedback Synthesizer](/.claude/agents/product/feedback-synthesizer.md)** - Analyzes and categorizes user feedback at scale
-- **[Sprint Prioritizer](/.claude/agents/product/sprint-prioritizer.md)** - Manages backlogs and prioritizes work
-- **[Trend Researcher](/.claude/agents/product/trend-researcher.md)** - Identifies market trends and competitive intelligence
-
-### 📋 Project Management (3 agents)
-
-Project management agents coordinate delivery, track experiments, and allocate resources.
-
-- **[Experiment Tracker](/.claude/agents/project-management/experiment-tracker.md)** - Manages A/B tests and learning repositories
-- **[Project Shipper](/.claude/agents/project-management/project-shipper.md)** - Coordinates releases and removes blockers
-- **[Studio Producer](/.claude/agents/project-management/studio-producer.md)** - Orchestrates portfolio resources and priorities
-
-### 🏢 Studio Operations (5 agents)
-
-Operations agents handle the business infrastructure that keeps the studio running.
-
-- **[Analytics Reporter](/.claude/agents/studio-operations/analytics-reporter.md)** - Tracks KPIs and generates business intelligence
-- **[Finance Tracker](/.claude/agents/studio-operations/finance-tracker.md)** - Manages burn rate, budgets, and financial health
-- **[Infrastructure Maintainer](/.claude/agents/studio-operations/infrastructure-maintainer.md)** - Maintains internal tools and access management
-- **[Legal & Compliance Checker](/.claude/agents/studio-operations/legal-compliance-checker.md)** - Ensures GDPR, SOC 2, and regulatory compliance
-- **[Support Responder](/.claude/agents/studio-operations/support-responder.md)** - Handles customer support and documentation
-
-### 🧪 Testing (5 agents)
-
-Testing agents ensure quality through comprehensive testing and continuous optimization.
-
-- **[API Tester](/.claude/agents/testing/api-tester.md)** - Validates API contracts and integration quality
-- **[Performance Benchmarker](/.claude/agents/testing/performance-benchmarker.md)** - Stress-tests systems and identifies bottlenecks
-- **[Test Results Analyzer](/.claude/agents/testing/test-results-analyzer.md)** - Analyzes test failures and quality trends
-- **[Tool Evaluator](/.claude/agents/testing/tool-evaluator.md)** - Evaluates technologies and performs build vs. buy analysis
-- **[Workflow Optimizer](/.claude/agents/testing/workflow-optimizer.md)** - Eliminates SDLC bottlenecks and friction
-
-## Agent Definition Format
-
-Each agent definition follows a consistent structure:
-
-- **Profile** - High-level description of the agent's purpose and philosophy
-- **Capabilities** - Specific skills and areas of expertise (8-10 key capabilities)
-- **Tools & Technologies** - Recommended tools and platforms for this role
-- **When to Use This Agent** - Specific scenarios and use cases
-- **Example Tasks** - 7 concrete examples demonstrating the agent's work
-- **Deliverables** - Expected outputs and artifacts
-- **Collaboration** - How this agent works with other agents
-- **Success Metrics** - KPIs and measurements of effectiveness
-- **Anti-patterns** - Common mistakes to avoid (10 specific anti-patterns)
-
-## How to Use These Agents
-
-### With Claude
-
-These agent definitions can be used as system prompts or role definitions when working with Claude (or other LLMs):
-
-1. **Select the appropriate agent** based on your task
-2. **Include the agent definition** in your system prompt or context
-3. **Provide task-specific instructions** aligned with the agent's capabilities
-4. **Reference collaboration patterns** when multiple agents need to work together
-
-### As Team Templates
-
-These definitions also serve as:
-
-- **Job descriptions** for hiring specialized roles
-- **Training materials** for onboarding new team members
-- **Process documentation** for standardizing workflows
-- **Performance frameworks** defining success metrics for each role
-
-## Key Features
-
-- ✅ **Comprehensive Coverage** - 34 agents spanning all SDLC phases
-- ✅ **Detailed Guidance** - Each agent expanded from ~15 to ~100 lines with actionable detail
-- ✅ **Collaborative Design** - Clear interfaces showing how agents work together
-- ✅ **Practical Examples** - 7+ concrete example tasks per agent
-- ✅ **Tool Recommendations** - Specific tools and platforms for each domain
-- ✅ **Anti-patterns** - Common mistakes to avoid (10 per agent)
-- ✅ **Success Metrics** - Measurable KPIs for each role
-- ✅ **Consistent Format** - Standardized structure across all agents
-
-## Statistics
-
-- **Total Agents**: 34
-- **Total Categories**: 7
-- **Average Agent Length**: ~95-100 lines
-- **Total Content**: ~3,400 lines of detailed role definitions
-- **Tools Referenced**: 200+ tools and platforms across all domains
-- **Example Tasks**: 238 concrete examples (7 per agent)
-- **Anti-patterns**: 340 specific mistakes to avoid (10 per agent)
-
-## Contributing
-
-This collection is designed to evolve with the software development landscape. Contributions are welcome for:
-
-- New agent definitions for emerging roles
-- Updates to tools and technologies
-- Additional example tasks and case studies
-- Improved collaboration patterns
-- Success metric refinements
-
-## License
-
-MIT License - feel free to use, modify, and distribute these agent definitions for your own projects.
+- **Parallel Tool Use**: Prompts encourage agents to read multiple files and run speculative searches simultaneously, significantly reducing latency.
+- **Anti-Hallucination Guardrails**: System instructions mandate that agents must `read` a file before discussing its contents.
+- **Frontend Aesthetic Guidance**: Includes specific protocols to avoid "AI Slop" by enforcing unique typography, cohesive color palettes, and staggered micro-interactions.
+- **Context Awareness**: Agents are trained to monitor their token budget and save state proactively before a refresh.
 
 ---
 
-**Built for modern software development studios** • **34 specialized agents** • **7 core categories** • **Comprehensive collaboration patterns**
+**Built for modern software development studios** • **MIT Licensed** • **Claude 4.5 Optimized**

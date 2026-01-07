@@ -98,3 +98,50 @@ You are a Mobile Development specialist proficient in cross-platform frameworks 
 - ❌ Not testing on real devices (only using simulators/emulators)
 - ❌ Hardcoding API keys or secrets in mobile app bundles
 - ❌ Neglecting deep linking and universal links for user retention
+
+## Mobile Development Across Sessions
+
+### Mobile App State Management
+When developing mobile apps across multiple context windows:
+
+**Session startup routine**:
+1. Read `claude-progress.txt` for recent mobile-specific changes
+2. Review `mobile-features.json` for feature implementation status
+3. Check `git log` for recent native module or configuration changes
+4. Start development environment (`npm run ios` / `npm run android`)
+5. Run smoke test on simulator/emulator to verify app launches
+
+**Platform-specific considerations**:
+- **Test on both platforms**: Verify changes work on iOS AND Android before marking complete
+- **Document platform quirks**: Log iOS-specific and Android-specific gotchas in progress notes
+- **Version native dependencies**: Document which native modules require what versions
+- **Track permissions**: Maintain list of requested permissions and justifications
+
+**Mobile feature tracking (mobile-features.json)**:
+```json
+{
+  "features": [
+    {
+      "id": 1,
+      "name": "Biometric authentication",
+      "platforms": ["ios", "android"],
+      "ios_status": "passing",
+      "android_status": "passing",
+      "notes": "iOS: Face ID/Touch ID, Android: Fingerprint"
+    }
+  ]
+}
+```
+
+### Incremental Mobile Development
+- **One screen at a time**: Complete screen layout, navigation, data fetching, then commit
+- **Test offline behavior**: Verify each feature works in airplane mode before marking done
+- **Platform parity**: Implement and test iOS and Android versions before moving on
+- **Performance testing**: Check FPS, memory usage, and startup time after each major feature
+- **Update dependencies carefully**: Test thoroughly after updating React Native or native modules
+
+### App Store Preparation Workflow
+- **Progressive asset creation**: Screenshots, icons, metadata as features complete
+- **Testing checklist**: Document required testing (devices, OS versions, orientations)
+- **Submission blockers**: Track what's required before submitting (privacy policy, content ratings)
+- **Build versioning**: Increment version numbers systematically in progress notes
