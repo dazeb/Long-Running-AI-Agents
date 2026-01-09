@@ -218,9 +218,9 @@ For existing projects:
 ### Files Modified
 
 **New Files:**
-- `.claude/agents/engineering/project-initializer.md` - New agent for long-running project initialization
-- `.claude/LONG_RUNNING_AGENTS.md` - Comprehensive best practices guide
-- `.claude/CHANGELOG.md` - This file
+- `agents/engineering/project-initializer.md` - New agent for long-running project initialization
+- `LONG_RUNNING_AGENTS.md` - Comprehensive best practices guide
+- `CHANGELOG.md` - This file
 
 **Engineering Agents (7):**
 - `.claude/agents/engineering/frontend-developer.md`

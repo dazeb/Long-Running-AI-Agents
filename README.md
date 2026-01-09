@@ -1,6 +1,6 @@
 # Claude AI Agents Collection
 
-A comprehensive library of **35 specialized AI agent role definitions** for modern software development studios. This collection is optimized for **Claude 4.x (Sonnet/Opus 4.5)** and implements the latest industry best practices for **"Long-Running Agents"**.
+A comprehensive library of **36 specialized AI agent role definitions** for modern software development studios. This collection is optimized for **Claude 4.x (Sonnet/Opus 4.5)** and implements the latest industry best practices for **"Long-Running Agents"**.
 
 ## 🧠 Philosophy: Why Build Agents Like This?
 
@@ -78,7 +78,7 @@ Once initialized, use specialized agents to build feature-by-feature.
 | [📱 ASO Specialist](.claude/agents/marketing/app-store-optimizer.md) | [🛠️ Infra Maintainer](.claude/agents/studio-operations/infrastructure-maintainer.md) | [📉 Results Analyzer](.claude/agents/testing/test-results-analyzer.md) |
 | [📸 Instagram Curator](.claude/agents/marketing/instagram-curator.md) | [⚖️ Legal & Compliance](.claude/agents/studio-operations/legal-compliance-checker.md) | [🔧 Tool Evaluator](.claude/agents/testing/tool-evaluator.md) |
 | [🤖 Reddit Builder](.claude/agents/marketing/reddit-community-builder.md) | [🎧 Support Responder](.claude/agents/studio-operations/support-responder.md) | [⚙️ Workflow Optimizer](.claude/agents/testing/workflow-optimizer.md) |
-| [🎥 TikTok Strategist](.claude/agents/marketing/tiktok-strategist.md) | | |
+| [🎥 TikTok Strategist](.claude/agents/marketing/tiktok-strategist.md) | [📱 Telegram Notifier](.claude/agents/studio-operations/telegram-notifier.md) | |
 | [🐦 Twitter Engager](.claude/agents/marketing/twitter-engager.md) | | |
 
 | Project Management |
