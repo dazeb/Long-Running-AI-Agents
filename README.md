@@ -1,96 +1,254 @@
-# 🤖 Claude AI Agents Collection
+# 🤖 Claude AI Agents
 
-> **A comprehensive library of 36 specialized AI agent role definitions** for modern software development studios, optimized for **Claude 4.x (Sonnet/Opus 4.5)** and implementing cutting-edge **"Long-Running Agents"** methodology.
+**Ready-to-use AI agent templates that make Claude smarter at specific tasks.**
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Claude 4.5 Optimized](https://img.shields.io/badge/Claude-4.5%20Optimized-orange.svg)]()
-[![36 Agents](https://img.shields.io/badge/Agents-36-blue.svg)]()
+[![43 Agents](https://img.shields.io/badge/Agents-43-blue.svg)]()
 
 ---
 
-## 🚀 **Start Tasks & Go!** - Remote Approval via Telegram
+## ⚡ Quick Start (60 seconds)
 
-> **🎯 New Feature**: Assign Claude a task, then **leave your computer**. Approve or deny Claude's actions right from your phone using our Telegram bot with interactive buttons!
+**What is this?** A collection of specialized "expert personas" that make Claude better at specific development tasks.
 
-**Perfect for:**
-- 💼 **Long-running tasks** - Start a refactor, go to lunch, approve changes from your phone
-- 🛏️ **Overnight processing** - Let Claude work while you sleep, wake up to approval requests
-- 🏖️ **Remote work** - Delegate tasks from anywhere, stay in control via Telegram
-- 🔒 **Security** - Human-in-the-loop approval for sensitive operations (database changes, deployments, API calls)
+**How does it work?**
+1. Clone this repo into your project
+2. Reference an agent when talking to Claude (e.g., `@frontend-developer`)
+3. Claude now has deep expertise in that domain
 
-👉 **[Jump to Telegram Setup](#-telegram-notifier---remote-approval-system)** to enable remote task approval in 2 minutes.
+**Try it now:**
+```bash
+# Clone into your project
+git clone https://github.com/dazeb/Long-Running-AI-Agents.git .claude
+
+# Use an agent
+# Just say: "@frontend-developer, build me a responsive navbar"
+```
+
+That's it! Claude will now respond with frontend-specific best practices, modern tools, and avoid common pitfalls.
 
 ---
 
----
+## 🎯 What You Get
 
-## 🎯 Start Here: The Project Initializer
+**43 specialized agents** across different domains:
 
-> ⚠️ **CRITICAL FIRST STEP**: Always begin with the [**Project Initializer**](.claude/agents/engineering/project-initializer.md) agent. It's the foundation that makes all other agents effective.
+- **💻 Web Development** (7 agents) - React, APIs, CSS, PWAs, performance, full-stack, static sites
+- **🔧 Engineering** (7 agents) - Backend, frontend, mobile, AI, DevOps, prototyping
+- **🎨 Design** (5 agents) - UI, UX, branding, animations, visual storytelling
+- **📈 Marketing** (7 agents) - Content, growth, social media, ASO
+- **📦 Product** (3 agents) - Feedback analysis, prioritization, trend research
+- **🎬 Project Management** (3 agents) - Shipping, experiments, coordination
+- **🏢 Operations** (6 agents) - Analytics, finance, support, compliance, infrastructure
+- **🧪 Testing** (5 agents) - API testing, performance, quality analysis
 
-### Why Start with the Initializer?
-
-The **Project Initializer** creates the essential infrastructure that allows agents to work across multiple sessions without losing context:
-
-- 📋 **`tests.json`** - A machine-readable roadmap of 50-200+ micro-features
-- 🔧 **`init.sh`** - Automated environment setup (no more "setup toil")
-- 📝 **`claude-progress.txt`** - Session memory tracking decisions and rationale
-- 🗂️ **Project structure** - Organized folders, configs, and documentation
-
-### 🚀 Example Starter Prompts
-
-Copy these prompts to get started with different project types:
-
-#### 1. **Full-Stack Web Application**
-```
-Use the @project-initializer agent to scaffold a new Next.js 14 e-commerce platform
-with the following requirements:
-- User authentication (email/password + OAuth)
-- Product catalog with search and filtering
-- Shopping cart and checkout with Stripe
-- Admin dashboard for inventory management
-- PostgreSQL database with Prisma ORM
-
-Create a comprehensive tests.json with 80+ granular features broken down into
-atomic units (auth, products, cart, checkout, admin). Include init.sh for
-dependency installation and dev server startup. Generate initial claude-progress.txt
-documenting the architecture decisions.
-```
-
-#### 2. **API Service / Backend**
-```
-Use the @project-initializer agent to create a new REST API service in Python (FastAPI)
-for a social media analytics platform:
-- JWT authentication with refresh tokens
-- User management and permissions (RBAC)
-- Social media account integration (Twitter, Instagram APIs)
-- Analytics data collection and aggregation
-- WebSocket real-time updates
-- PostgreSQL + Redis for caching
-
-Generate tests.json with 60+ features covering all endpoints, authentication flows,
-data processing pipelines, and edge cases. Create init.sh with venv setup,
-dependency installation, and database migrations. Document API design decisions
-in claude-progress.txt.
-```
-
-#### 3. **Mobile App (React Native)**
-```
-Use the @project-initializer agent to scaffold a new React Native fitness tracking app:
-- User onboarding and profile setup
-- Activity tracking (steps, workouts, nutrition)
-- Social features (friends, challenges, leaderboard)
-- Push notifications and reminders
-- Offline-first architecture with local storage sync
-- Integration with Apple Health / Google Fit
-
-Create tests.json with 70+ micro-features including onboarding flows, data sync logic,
-UI components, and edge cases. Include init.sh for Expo setup and initial
-dependencies. Generate claude-progress.txt with mobile-specific architecture decisions
-(state management, navigation, offline strategy).
-```
+Each agent knows:
+- The right tools for the job
+- Best practices and patterns
+- Common mistakes to avoid
+- When to use them vs. other approaches
 
 ---
+
+## 💡 Why Use These Agents?
+
+**Without agents:**
+```
+You: "Build me a login form"
+Claude: Creates basic form with inline styles and no validation
+```
+
+**With agents:**
+```
+You: "@react-nextjs-specialist, build me a login form"
+Claude: Creates form with:
+  ✅ React Hook Form for validation
+  ✅ Zod schema for type safety
+  ✅ Server Actions for authentication
+  ✅ Loading states and error handling
+  ✅ Accessibility (ARIA labels, keyboard nav)
+  ✅ Responsive design
+```
+
+Agents turn general AI into domain experts.
+
+---
+
+## 📚 Browse Agents
+
+### 💻 Web Development (NEW!)
+| Agent | Use When |
+|-------|----------|
+| [React/Next.js Specialist](.claude/agents/web-development/react-nextjs-specialist.md) | Building Next.js apps, Server Components, App Router |
+| [API Integration Specialist](.claude/agents/web-development/api-integration-specialist.md) | Connecting to REST/GraphQL APIs, auth flows |
+| [Full-Stack Developer](.claude/agents/web-development/fullstack-web-developer.md) | Building complete apps from database to UI |
+| [Web Performance Optimizer](.claude/agents/web-development/web-performance-optimizer.md) | Fixing slow sites, improving Core Web Vitals |
+| [PWA Builder](.claude/agents/web-development/pwa-builder.md) | Making apps installable and work offline |
+| [CSS & Tailwind Expert](.claude/agents/web-development/css-tailwind-expert.md) | Advanced styling, animations, design systems |
+| [Static Site Specialist](.claude/agents/web-development/static-site-specialist.md) | Building fast sites with Astro, 11ty, Hugo |
+
+### 🏗️ Engineering
+| Agent | Use When |
+|-------|----------|
+| [Project Initializer](.claude/agents/engineering/project-initializer.md) | Starting any new project (creates structure) |
+| [AI Engineer](.claude/agents/engineering/ai-engineer.md) | Adding AI features, RAG systems, LLM integration |
+| [Backend Architect](.claude/agents/engineering/backend-architect.md) | Building APIs, databases, server-side logic |
+| [DevOps Automator](.claude/agents/engineering/devops-automator.md) | Setting up CI/CD, Docker, deployments |
+| [Frontend Developer](.claude/agents/engineering/frontend-developer.md) | Building UIs with React/Vue/Svelte |
+| [Mobile App Builder](.claude/agents/engineering/mobile-app-builder.md) | Creating React Native or Flutter apps |
+| [Rapid Prototyper](.claude/agents/engineering/rapid-prototyper.md) | Quick MVPs and proof-of-concepts |
+
+### 🎨 Design
+| Agent | Use When |
+|-------|----------|
+| [Brand Guardian](.claude/agents/design/brand-guardian.md) | Ensuring brand consistency |
+| [UI Designer](.claude/agents/design/ui-designer.md) | Designing interfaces and components |
+| [UX Researcher](.claude/agents/design/ux-researcher.md) | User research and testing |
+| [Visual Storyteller](.claude/agents/design/visual-storyteller.md) | Creating illustrations and infographics |
+| [Whimsy Injector](.claude/agents/design/whimsy-injector.md) | Adding delightful animations and interactions |
+
+### 📈 Marketing
+| Agent | Use When |
+|-------|----------|
+| [Content Creator](.claude/agents/marketing/content-creator.md) | Writing blog posts, newsletters, case studies |
+| [Growth Hacker](.claude/agents/marketing/growth-hacker.md) | Optimizing funnels and acquisition |
+| [ASO Specialist](.claude/agents/marketing/app-store-optimizer.md) | Improving app store visibility |
+| [Instagram Curator](.claude/agents/marketing/instagram-curator.md) | Planning Instagram content |
+| [Reddit Builder](.claude/agents/marketing/reddit-community-builder.md) | Building Reddit communities |
+| [TikTok Strategist](.claude/agents/marketing/tiktok-strategist.md) | Creating TikTok content strategy |
+| [Twitter Engager](.claude/agents/marketing/twitter-engager.md) | Growing Twitter presence |
+
+### 📦 Product & PM
+| Agent | Use When |
+|-------|----------|
+| [Feedback Synthesizer](.claude/agents/product/feedback-synthesizer.md) | Analyzing user feedback |
+| [Sprint Prioritizer](.claude/agents/product/sprint-prioritizer.md) | Prioritizing features |
+| [Trend Researcher](.claude/agents/product/trend-researcher.md) | Market research and trends |
+| [Experiment Tracker](.claude/agents/project-management/experiment-tracker.md) | Managing A/B tests |
+| [Project Shipper](.claude/agents/project-management/project-shipper.md) | Coordinating launches |
+| [Studio Producer](.claude/agents/project-management/studio-producer.md) | Managing multiple projects |
+
+### 🏢 Operations & Testing
+| Agent | Use When |
+|-------|----------|
+| [Analytics Reporter](.claude/agents/studio-operations/analytics-reporter.md) | Tracking metrics and KPIs |
+| [Finance Tracker](.claude/agents/studio-operations/finance-tracker.md) | Managing budgets and runway |
+| [Infrastructure Maintainer](.claude/agents/studio-operations/infrastructure-maintainer.md) | Maintaining internal tools |
+| [Legal & Compliance](.claude/agents/studio-operations/legal-compliance-checker.md) | GDPR, licensing, compliance |
+| [Support Responder](.claude/agents/studio-operations/support-responder.md) | Handling customer support |
+| [API Tester](.claude/agents/testing/api-tester.md) | Testing API contracts |
+| [Performance Benchmarker](.claude/agents/testing/performance-benchmarker.md) | Load testing and optimization |
+| [Test Results Analyzer](.claude/agents/testing/test-results-analyzer.md) | Analyzing test quality |
+| [Tool Evaluator](.claude/agents/testing/tool-evaluator.md) | Build vs. buy decisions |
+| [Workflow Optimizer](.claude/agents/testing/workflow-optimizer.md) | Improving developer workflows |
+
+---
+
+## 🚀 How to Use
+
+### Option 1: Claude Code CLI (Recommended)
+```bash
+# Clone into your project
+git clone https://github.com/dazeb/Long-Running-AI-Agents.git .claude
+
+# Agents are auto-discovered. Just reference them:
+# "@react-nextjs-specialist, build a user profile page"
+```
+
+### Option 2: Claude Web/Desktop
+```bash
+# Copy any agent's content into Claude's system prompt
+# Example: Open .claude/agents/web-development/react-nextjs-specialist.md
+# Copy content → Paste into Claude → Start chatting
+```
+
+---
+
+## 📱 Optional: Telegram Notifier
+
+Get notifications on your phone when Claude completes tasks or needs approval for important actions.
+
+**What it does:**
+- ✅ Sends task completion alerts to your phone
+- 🔔 Requests approval for sensitive operations (deployments, DB changes)
+- 🚨 Sends error notifications in real-time
+
+**Setup (2 minutes):**
+```bash
+cd .claude/tools/telegram-notifier
+npm install
+node telegram-notifier.js setup
+```
+
+The wizard will walk you through creating a Telegram bot and connecting it.
+
+**Example use:**
+```bash
+# Get notified when builds complete
+node telegram-notifier.js send "✅ Build successful!"
+
+# Request approval for sensitive operations
+node telegram-notifier.js approve "Deploy to production?"
+```
+
+📚 **[Full Documentation](.claude/tools/telegram-notifier/TELEGRAM_QUICK_START.md)**
+
+---
+
+## 🤝 Contributing
+
+Want to add agents or improve existing ones? PRs welcome!
+
+1. Follow the agent template structure
+2. Include concrete examples
+3. Document anti-patterns (common mistakes)
+4. Submit PR with clear description
+
+---
+
+## 📄 License
+
+MIT License - use freely for personal or commercial projects.
+
+---
+
+## 💬 FAQ
+
+**Q: Do I need all 43 agents?**
+No! Use only what you need. Most projects use 2-5 agents.
+
+**Q: Can I modify agents for my needs?**
+Absolutely! Fork and customize to match your stack and preferences.
+
+**Q: Do agents work with Claude Web (not CLI)?**
+Yes! Copy any agent's content into your conversation or system prompt.
+
+**Q: What's the "Project Initializer" agent?**
+It creates project structure and tracking files for complex projects. Optional for simple tasks.
+
+**Q: Are these better than generic Claude?**
+For specialized tasks, yes! Agents provide domain expertise, know the right tools, and avoid common mistakes.
+
+---
+
+## 🚀 Quick Reference
+
+```
+┌─────────────────────────────────────────────┐
+│  BASIC WORKFLOW                             │
+├─────────────────────────────────────────────┤
+│  1. Clone repo into .claude folder          │
+│  2. Reference agent: @agent-name            │
+│  3. Get expert-level responses              │
+└─────────────────────────────────────────────┘
+```
+
+**Ready to build?** Pick an agent and start building! 🚀
+
+---
+
+<details>
+<summary><h2>📖 Advanced: Long-Running Agents Methodology (Click to expand)</h2></summary>
 
 ## 🧠 Philosophy: Why Long-Running Agents?
 
@@ -183,336 +341,6 @@ Complex features are broken into **Atomic Units** in `tests.json`:
 | `.git/` | Code verification | Git commits | After each atomic unit completion |
 
 > 💡 **Pro Tip**: These files are your "source of truth". Any agent can recover full project state by reading them, even months later.
-
----
-
-## 📂 The 36 Specialized Agents
-
-### 🏗️ Engineering (7 agents)
-*Building the technical foundation*
-
-| Agent | Role | When to Use |
-|-------|------|-------------|
-| [🔧 **Project Initializer**](.claude/agents/engineering/project-initializer.md) | **Start here!** Scaffolds projects with tests.json, init.sh | Every new project |
-| [🤖 AI Engineer](.claude/agents/engineering/ai-engineer.md) | RAG systems, LLM integration, prompt engineering | AI features |
-| [🏛️ Backend Architect](.claude/agents/engineering/backend-architect.md) | API design, database modeling, microservices | Server-side logic |
-| [🚀 DevOps Automator](.claude/agents/engineering/devops-automator.md) | CI/CD, Docker, Kubernetes, infrastructure | Deployment automation |
-| [💻 Frontend Developer](.claude/agents/engineering/frontend-developer.md) | React/Vue/Svelte, state management, accessibility | User interfaces |
-| [📱 Mobile App Builder](.claude/agents/engineering/mobile-app-builder.md) | React Native, Flutter, offline-first apps | Mobile development |
-| [⚡ Rapid Prototyper](.claude/agents/engineering/rapid-prototyper.md) | MVPs, proof-of-concepts, quick validation | Fast iteration |
-
----
-
-### 🎨 Design (5 agents)
-*Crafting delightful user experiences*
-
-| Agent | Role | When to Use |
-|-------|------|-------------|
-| [🎨 Brand Guardian](.claude/agents/design/brand-guardian.md) | Brand consistency, design systems, voice/tone | Brand standards |
-| [🍱 UI Designer](.claude/agents/design/ui-designer.md) | Component design, mockups, Figma workflows | Interface design |
-| [🔍 UX Researcher](.claude/agents/design/ux-researcher.md) | User interviews, usability testing, heuristics | Research & validation |
-| [🖼️ Visual Storyteller](.claude/agents/design/visual-storyteller.md) | Illustrations, infographics, data visualization | Visual content |
-| [✨ Whimsy Injector](.claude/agents/design/whimsy-injector.md) | Micro-interactions, animations, delight mechanics | Polish & personality |
-
----
-
-### 📈 Marketing (7 agents)
-*Growing and engaging your audience*
-
-| Agent | Role | When to Use |
-|-------|------|-------------|
-| [✍️ Content Creator](.claude/agents/marketing/content-creator.md) | SEO articles, newsletters, case studies | Long-form content |
-| [📈 Growth Hacker](.claude/agents/marketing/growth-hacker.md) | Funnel optimization, A/B testing, viral loops | User acquisition |
-| [📱 ASO Specialist](.claude/agents/marketing/app-store-optimizer.md) | App store optimization, screenshots, keywords | Mobile app visibility |
-| [📸 Instagram Curator](.claude/agents/marketing/instagram-curator.md) | Grid planning, Stories, Reels, Shopping | Instagram presence |
-| [🤖 Reddit Builder](.claude/agents/marketing/reddit-community-builder.md) | Community building, AMAs, authentic engagement | Reddit strategy |
-| [🎥 TikTok Strategist](.claude/agents/marketing/tiktok-strategist.md) | Short-form video, trending audio, edutainment | TikTok content |
-| [🐦 Twitter Engager](.claude/agents/marketing/twitter-engager.md) | Thought leadership, viral threads, building in public | Twitter growth |
-
----
-
-### 📦 Product (3 agents)
-*Defining what to build*
-
-| Agent | Role | When to Use |
-|-------|------|-------------|
-| [💡 Feedback Synthesizer](.claude/agents/product/feedback-synthesizer.md) | User feedback analysis, theme categorization | Understanding users |
-| [📊 Sprint Prioritizer](.claude/agents/product/sprint-prioritizer.md) | Backlog grooming, RICE scoring, user stories | Feature prioritization |
-| [📈 Trend Researcher](.claude/agents/product/trend-researcher.md) | Market analysis, competitive intelligence | Strategic direction |
-
----
-
-### 🎬 Project Management (3 agents)
-*Coordinating delivery and resources*
-
-| Agent | Role | When to Use |
-|-------|------|-------------|
-| [🔬 Experiment Tracker](.claude/agents/project-management/experiment-tracker.md) | A/B test management, learning repositories | Running experiments |
-| [📦 Project Shipper](.claude/agents/project-management/project-shipper.md) | Release coordination, blocker removal | Launch management |
-| [🎬 Studio Producer](.claude/agents/project-management/studio-producer.md) | Portfolio management, resource allocation | Multi-project orchestration |
-
----
-
-### 🏢 Studio Operations (6 agents)
-*Running the business infrastructure*
-
-| Agent | Role | When to Use |
-|-------|------|-------------|
-| [📊 Analytics Reporter](.claude/agents/studio-operations/analytics-reporter.md) | KPI tracking, dashboards, business intelligence | Data-driven decisions |
-| [💰 Finance Tracker](.claude/agents/studio-operations/finance-tracker.md) | Burn rate, P&L, runway forecasting | Financial health |
-| [🛠️ Infrastructure Maintainer](.claude/agents/studio-operations/infrastructure-maintainer.md) | Internal tools, access management, IT | Operational systems |
-| [⚖️ Legal & Compliance](.claude/agents/studio-operations/legal-compliance-checker.md) | GDPR, SOC 2, license auditing | Compliance & risk |
-| [🎧 Support Responder](.claude/agents/studio-operations/support-responder.md) | Customer support, documentation, SLAs | User assistance |
-| [📱 Telegram Notifier](.claude/agents/studio-operations/telegram-notifier.md) | Real-time alerts, team notifications | Communication automation |
-
----
-
-### 🧪 Testing (5 agents)
-*Ensuring quality and optimizing workflows*
-
-| Agent | Role | When to Use |
-|-------|------|-------------|
-| [🧪 API Tester](.claude/agents/testing/api-tester.md) | Contract testing, auth boundaries, schemas | API quality assurance |
-| [🏎️ Performance Benchmarker](.claude/agents/testing/performance-benchmarker.md) | Load testing, bottleneck identification, SLOs | Performance validation |
-| [📉 Test Results Analyzer](.claude/agents/testing/test-results-analyzer.md) | Flaky test detection, quality trends, RCA | Quality analytics |
-| [🔧 Tool Evaluator](.claude/agents/testing/tool-evaluator.md) | Build vs. buy analysis, vendor selection, TCO | Technology decisions |
-| [⚙️ Workflow Optimizer](.claude/agents/testing/workflow-optimizer.md) | CI/CD optimization, automation, DORA metrics | Developer productivity |
-
----
-
-## 🛠️ Installation & Setup
-
-### Quick Start
-
-```bash
-# 1. Clone into your project
-cd your-project-root
-git clone https://github.com/yourusername/claude-ai-agents.git .claude
-
-# 2. (Optional) Set up Telegram notifications
-cd .claude/tools/telegram-notifier
-npm install
-node telegram-notifier.js setup
-
-# 3. Start with the Initializer (see example prompts above)
-# Copy one of the 3 starter prompts and run it with Claude
-
-# 4. Use specialized agents for features
-# Example: "@Frontend Developer, implement the login form from tests.json"
-```
-
-### For Claude Code CLI
-
-Agents in `.claude/agents/` are automatically discoverable. Reference them with:
-```
-@project-initializer scaffold a new Next.js dashboard
-@frontend-developer implement the user profile page
-@api-tester write tests for the authentication endpoints
-```
-
-### For Claude Web/Desktop
-
-Copy the content of any agent `.md` file into your system prompt or custom instructions section.
-
----
-
-## 📱 Telegram Notifier - Remote Approval System
-
-**🎯 Game Changer**: The Telegram Notifier now includes **interactive approval buttons** that let you control Claude remotely!
-
-### ⭐ Remote Approval (NEW!)
-
-**Start a task and walk away** - Claude will send approval requests to your phone:
-
-```javascript
-// Claude needs your approval before making changes
-const approved = await notifier.requestApproval(
-    'Modify database configuration',
-    'Update connection strings in production',
-    300000 // 5 minute timeout
-);
-
-if (approved) {
-    // User clicked ✅ Approve on their phone
-    await applyDatabaseChanges();
-} else {
-    // User clicked ❌ Deny
-    console.log('Change rejected by user');
-}
-```
-
-**You'll receive in Telegram:**
-```
-🤖 Claude Code Authorization Request
-
-📋 Action: Modify database configuration
-📝 Details: Update connection strings in production
-⏰ Timeout: 300 seconds
-
-Please approve or deny this action:
-[✅ Approve]  [❌ Deny]
-```
-
-### ✨ Additional Features
-
-Send real-time notifications for:
-- ✅ Task completions
-- 🚀 Deployment status  
-- 🚨 Error alerts
-- 💚 System health checks
-- 📊 Progress reports
-- 💬 Custom messages
-
-### 🚀 Quick Start
-
-```bash
-cd .claude/tools/telegram-notifier
-```
-
-#### Option 1: Automatic Setup (Recommended)
-```bash
-# Run the notifier - setup wizard launches automatically if needed
-node telegram-notifier.js test
-```
-
-#### Option 2: Manual Setup
-```bash
-# Install dependencies
-npm install
-
-# Run setup wizard
-node telegram-notifier.js setup
-# or
-npm run setup
-```
-
-The interactive wizard will:
-1. Guide you through getting a bot token from @BotFather
-2. Validate your token with Telegram API
-3. Auto-detect your chat ID
-4. Create complete `.env` configuration
-5. Set up directory structure
-
-### 📋 Usage Examples
-
-```bash
-# Test connectivity
-npm test
-
-# Send a simple message
-node telegram-notifier.js send "Hello from Claude!"
-
-# Task completion notification
-node telegram-notifier.js task "User Authentication" "4" "45 minutes"
-
-# See all notification types
-npm run examples
-```
-
-### 💻 Programmatic Usage
-
-```javascript
-const TelegramNotifier = require('./telegram-notifier');
-const notifier = new TelegramNotifier();
-
-// Task completion
-await notifier.notifyTaskComplete('Feature XYZ', {
-    session: '5',
-    duration: '30 minutes',
-    notes: 'Implemented with tests'
-});
-
-// Deployment notification
-await notifier.notifyDeployment('v2.4.1', 'production', 'success');
-
-// Error alert
-await notifier.notifyError('API Timeout', 'Connection failed', {
-    file: 'api/client.js',
-    line: '127'
-});
-```
-
-### 🔧 Integration Examples
-
-**Git Hooks** - Auto-notify on commits:
-```bash
-# .git/hooks/post-commit
-#!/bin/bash
-./scripts/notify.sh commit
-```
-
-**CI/CD** - Build notifications:
-```yaml
-- name: Notify Success
-  run: node telegram-notifier.js send "✅ Build successful"
-  env:
-    TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-    TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-```
-
-**NPM Scripts** - Task notifications:
-```json
-{
-  "scripts": {
-    "posttest": "node telegram-notifier.js task 'Tests completed'",
-    "postdeploy": "node telegram-notifier.js send '🚀 Deployed!'"
-  }
-}
-```
-
-### 📚 Complete Documentation
-
-- **[TELEGRAM_QUICK_START.md](.claude/tools/telegram-notifier/TELEGRAM_QUICK_START.md)** - 2-minute quick reference
-- **[TELEGRAM_NOTIFIER_GUIDE.md](.claude/tools/telegram-notifier/TELEGRAM_NOTIFIER_GUIDE.md)** - Complete usage guide
-- **[SETUP_WIZARD_DEMO.md](.claude/tools/telegram-notifier/SETUP_WIZARD_DEMO.md)** - Setup wizard walkthrough
-- **[TELEGRAM_IMPROVEMENTS.md](.claude/tools/telegram-notifier/TELEGRAM_IMPROVEMENTS.md)** - 10 advanced features to add
-
-### 🎯 Key Features
-
-- 🧙 **Interactive setup wizard** - Zero manual configuration
-- ✅ **Real-time validation** - Tests credentials before saving
-- 🔍 **Auto-detection** - Finds your chat ID automatically
-- 📁 **File management** - Creates all necessary files/directories
-- 🛡️ **Secure** - Uses .env for credentials (never committed)
-
-### 📦 What's Included
-
-```
-.claude/tools/telegram-notifier/
-├── telegram-notifier.js          # Complete implementation with setup wizard (17KB)
-├── examples/
-│   └── telegram-usage-examples.js   # 6 working examples
-├── scripts/
-│   └── notify.sh                    # Shell wrapper for automation
-└── Documentation (4 files)
-```
-
-### 🔐 Security
-
-Your `.env` file is automatically protected:
-- Already in `.gitignore` - Won't be committed
-- Token validation before saving
-- No hardcoded credentials
-- Enable/disable flag for testing
-
-### 💡 Use Cases
-
-**🌟 Remote Approval Workflows (NEW!)**
-- **Start & Leave** - Assign Claude a multi-hour task, leave for the day, approve key decisions from your phone
-- **Sleep Mode** - Let Claude work overnight on data migrations, approve checkpoints in the morning
-- **From Anywhere** - Control dangerous operations (prod deploys, schema changes) remotely with confidence
-- **Async Collaboration** - Team members can approve Claude's work from different time zones
-
-**Classic Notifications:**
-- **Long-running tasks** - Get notified when builds/tests complete
-- **Background processes** - Monitor data migrations, backups
-- **CI/CD pipelines** - Build status, deployment confirmations
-- **Error monitoring** - Real-time alerts for production issues
-- **Team coordination** - Keep everyone updated on progress
-
-> **💡 Pro Tip**: The approval system transforms Claude from a synchronous assistant into an **autonomous worker you can trust** - start tasks, go about your day, and maintain control via your phone!
-
-Perfect for keeping stakeholders informed while working with Claude AI Agents!
 
 ---
 
@@ -847,53 +675,16 @@ We welcome contributions! Here's how to help:
 
 ---
 
-## 📄 License
+**[Read full advanced methodology documentation →](LONG_RUNNING_AGENTS.md)**
 
-**MIT License** - Use, modify, and distribute freely for personal or commercial projects.
+</details>
 
 ---
 
 ## 🙏 Acknowledgments
 
-- Built on [Anthropic's research on effective agents](https://www.anthropic.com/research/building-effective-agents)
-- Inspired by modern DevOps practices (DORA metrics, value stream mapping)
-- Community contributions from developers worldwide
+Built on [Anthropic's research on effective agents](https://www.anthropic.com/research/building-effective-agents) and inspired by modern DevOps practices.
 
 ---
 
-## 🚀 Quick Reference Card
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│  THE GOLDEN WORKFLOW                                        │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  1. START: @project-initializer                             │
-│     ↓ Creates: tests.json, init.sh, progress.txt            │
-│                                                             │
-│  2. IMPLEMENT: @Specialized Agent                           │
-│     ↓ Reads: progress.txt, tests.json                       │
-│     ↓ Implements: ONE atomic unit                           │
-│     ↓ Verifies: runs tests, manual checks                   │
-│     ↓ Commits: git commit with message                      │
-│     ↓ Updates: tests.json, progress.txt                     │
-│                                                             │
-│  3. REPEAT: Next feature with same/different agent          │
-│                                                             │
-├─────────────────────────────────────────────────────────────┤
-│  🎯 REMEMBER                                                │
-│  • Initializer FIRST (always)                               │
-│  • ONE atomic unit per session                              │
-│  • Verify before marking complete                           │
-│  • Commit after each success                                │
-│  • Update progress.txt with "why" decisions                 │
-└─────────────────────────────────────────────────────────────┘
-```
-
----
-
-**Ready to build?** Start with the [Project Initializer](.claude/agents/engineering/project-initializer.md) and one of the 3 example prompts above! 🚀
-
-**Questions?** Open an issue or check our [FAQ](./docs/FAQ.md)
-
-**Built for modern software development studios** • **MIT Licensed** • **Claude 4.5 Optimized** • **36 Specialized Agents**
+**Built by developers, for developers** • **MIT Licensed** • **43 Specialized Agents**
