@@ -83,6 +83,50 @@ Integrated with Claude Code's official plugin marketplace system:
 - Install by category or pre-configured bundles
 - No manual file management required
 
+#### 🤝 Parallel Agent Execution & Delegation
+Added collaborative AI agent capabilities to all 43 agents:
+
+**New Section Added to Every Agent:**
+- "Parallel Agent Execution & Delegation" section
+- Instructions on when and how to delegate to other agents
+- Up to 5 agents can work in parallel on the same project
+- Common delegation patterns for different scenarios
+- Complete directory of all available agents
+- Best practices for parallel execution
+
+**Key Capabilities:**
+```typescript
+// Spawn multiple agents in parallel
+Task tool: "@backend-architect, create REST API"       // Agent 1
+Task tool: "@frontend-developer, build UI components"  // Agent 2 (parallel)
+Task tool: "@api-tester, write integration tests"     // Agent 3 (parallel)
+```
+
+**Common Delegation Patterns:**
+- **Building Features**: backend-architect + frontend-developer + api-tester (parallel)
+- **Performance**: web-performance-optimizer + performance-benchmarker
+- **Design & Styling**: ui-designer + css-tailwind-expert + whimsy-injector
+- **Deployment**: devops-automator + infrastructure-maintainer
+
+**Benefits:**
+- Agents can delegate to domain experts for better results
+- Parallel execution speeds up complex projects
+- True collaborative AI workflow
+- Agents know when to delegate vs. do work themselves
+- Prevents single-agent bottlenecks
+
+**Example Workflow:**
+```bash
+User: "Build a user authentication system"
+Agent: Spawns 3 agents in parallel:
+  1. @backend-architect - API endpoints
+  2. @frontend-developer - Login UI
+  3. @api-tester - Integration tests
+All work simultaneously, results integrated
+```
+
+This enables specialized agents to work together efficiently on complex, multi-faceted projects.
+
 #### 🏪 Interactive CLI Installer
 Created bash-based marketplace installer for non-plugin installation:
 
