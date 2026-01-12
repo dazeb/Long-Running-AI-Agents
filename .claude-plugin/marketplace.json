@@ -6,7 +6,7 @@
     "email": "[email protected]",
     "url": "https://github.com/dazeb/Long-Running-AI-Agents"
   },
-  "description": "Comprehensive collection of 43 specialized AI agents for Claude Code - covering web development, engineering, design, marketing, product, operations, and testing",
+  "description": "Comprehensive collection of 44 specialized AI agents for Claude Code - covering web development, engineering, design, marketing, product, operations, and testing",
   "version": "2.2.0",
   "plugins": [
     {
@@ -32,7 +32,7 @@
     {
       "name": "engineering-agents",
       "source": "./",
-      "description": "7 core engineering agents including the essential Project Initializer for long-term memory",
+      "description": "8 core engineering agents including the essential Project Initializer for long-term memory and Agent Creator for building custom agents",
       "version": "2.2.0",
       "author": {
         "name": "dazeb",
@@ -46,7 +46,8 @@
         "engineering/devops-automator",
         "engineering/frontend-developer",
         "engineering/mobile-app-builder",
-        "engineering/rapid-prototyper"
+        "engineering/rapid-prototyper",
+        "engineering/agent-creator"
       ]
     },
     {

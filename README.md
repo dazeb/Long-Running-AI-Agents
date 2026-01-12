@@ -3,7 +3,7 @@
 **Ready-to-use AI agent templates that make Claude smarter at specific tasks.**
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![43 Agents](https://img.shields.io/badge/Agents-43-blue.svg)]()
+[![44 Agents](https://img.shields.io/badge/Agents-44-blue.svg)]()
 [![Works with Claude Code](https://img.shields.io/badge/Claude_Code-Compatible-blue.svg)]()
 [![Works with OpenCode](https://img.shields.io/badge/OpenCode-Compatible-orange.svg)]()
 
@@ -86,10 +86,10 @@ The Project Initializer will create your entire project structure, roadmap, and 
 
 ## 🎯 What You Get
 
-**43 specialized agents** across different domains:
+**44 specialized agents** across different domains:
 
 - **💻 Web Development** (7 agents) - React, APIs, CSS, PWAs, performance, full-stack, static sites
-- **🔧 Engineering** (7 agents) - Backend, frontend, mobile, AI, DevOps, prototyping
+- **🔧 Engineering** (8 agents) - Backend, frontend, mobile, AI, DevOps, prototyping, agent creation
 - **🎨 Design** (5 agents) - UI, UX, branding, animations, visual storytelling
 - **📈 Marketing** (7 agents) - Content, growth, social media, ASO
 - **📦 Product** (3 agents) - Feedback analysis, prioritization, trend research
@@ -152,6 +152,7 @@ Agents turn general AI into domain experts.
 | [Frontend Developer](.claude/agents/engineering/frontend-developer.md) | Building UIs with React/Vue/Svelte |
 | [Mobile App Builder](.claude/agents/engineering/mobile-app-builder.md) | Creating React Native or Flutter apps |
 | [Rapid Prototyper](.claude/agents/engineering/rapid-prototyper.md) | Quick MVPs and proof-of-concepts |
+| [Agent Creator](.claude/agents/engineering/agent-creator.md) | Creating new specialized AI agents following best practices |
 
 ### 🎨 Design
 | Agent | Use When |

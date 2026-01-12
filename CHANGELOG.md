@@ -142,6 +142,36 @@ Created bash-based marketplace installer for non-plugin installation:
 curl -fsSL https://raw.githubusercontent.com/dazeb/Long-Running-AI-Agents/main/install.sh | bash
 ```
 
+#### 🤖 Agent Creator Meta-Agent
+Added a specialized meta-agent that creates new AI agents following best practices:
+
+**Features:**
+- **Comprehensive Template Structure** - Complete 11-section agent template in markdown
+- **7 Detailed Example Tasks** - Shows how to create Vue.js, Security, Data Science, WordPress, Database, Terraform, and TypeScript improvement agents
+- **Integration Checklist** - 14-item validation checklist for quality assurance
+- **Content Quality Guidelines** - Detailed guidance for each section (Profile, Capabilities, Tools, etc.)
+- **Naming Conventions** - Proper file naming and folder organization rules
+- **QA Process** - 7-phase quality assurance workflow (validation, review, testing, etc.)
+- **Parallel Execution Templates** - Standard patterns for agent collaboration
+- **Anti-patterns Documentation** - 18+ common mistakes to avoid when creating agents
+
+**File:** `.claude/agents/engineering/agent-creator.md` (571 lines)
+
+**Use When:**
+- Creating new specialized agents for frameworks/domains not covered
+- Improving existing agents with missing sections or outdated content
+- Converting team documentation into reusable agent definitions
+- Building agents for proprietary tools or internal workflows
+- Scaling agent creation across teams
+
+**Example:**
+```bash
+"@agent-creator, create a Vue.js 3 specialist agent with Composition API,
+Pinia state management, and Nuxt 3 integration"
+```
+
+The agent-creator will generate a complete agent definition following the established template, ensuring consistency and quality across all custom agents.
+
 #### 🚀 OpenCode Compatibility
 Added complete support for OpenCode users:
 

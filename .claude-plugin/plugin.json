@@ -1,7 +1,7 @@
 {
   "name": "long-running-ai-agents",
   "version": "2.2.0",
-  "description": "Comprehensive collection of 43 specialized AI agents for Claude Code - covering web development, engineering, design, marketing, product, operations, and testing",
+  "description": "Comprehensive collection of 44 specialized AI agents for Claude Code - covering web development, engineering, design, marketing, product, operations, and testing",
   "author": {
     "name": "dazeb",
     "email": "[email protected]",
@@ -47,7 +47,8 @@
       "devops-automator",
       "frontend-developer",
       "mobile-app-builder",
-      "rapid-prototyper"
+      "rapid-prototyper",
+      "agent-creator"
     ],
     "design": [
       "brand-guardian",
