@@ -1,0 +1,171 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "long-running-ai-agents",
+  "owner": {
+    "name": "dazeb",
+    "email": "[email protected]",
+    "url": "https://github.com/dazeb/Long-Running-AI-Agents"
+  },
+  "description": "Comprehensive collection of 43 specialized AI agents for Claude Code - covering web development, engineering, design, marketing, product, operations, and testing",
+  "version": "2.2.0",
+  "plugins": [
+    {
+      "name": "web-development-agents",
+      "source": "./",
+      "description": "7 specialized web development agents: React/Next.js, API Integration, Full-Stack, Performance, PWA, CSS/Tailwind, Static Sites",
+      "version": "2.2.0",
+      "author": {
+        "name": "dazeb",
+        "url": "https://github.com/dazeb"
+      },
+      "tags": ["web-development", "react", "nextjs", "api", "performance", "pwa", "css", "tailwind", "agents"],
+      "agents": [
+        "web-development/react-nextjs-specialist",
+        "web-development/api-integration-specialist",
+        "web-development/fullstack-web-developer",
+        "web-development/web-performance-optimizer",
+        "web-development/pwa-builder",
+        "web-development/css-tailwind-expert",
+        "web-development/static-site-specialist"
+      ]
+    },
+    {
+      "name": "engineering-agents",
+      "source": "./",
+      "description": "7 core engineering agents including the essential Project Initializer for long-term memory",
+      "version": "2.2.0",
+      "author": {
+        "name": "dazeb",
+        "url": "https://github.com/dazeb"
+      },
+      "tags": ["engineering", "backend", "frontend", "mobile", "ai", "devops", "agents"],
+      "agents": [
+        "engineering/project-initializer",
+        "engineering/ai-engineer",
+        "engineering/backend-architect",
+        "engineering/devops-automator",
+        "engineering/frontend-developer",
+        "engineering/mobile-app-builder",
+        "engineering/rapid-prototyper"
+      ]
+    },
+    {
+      "name": "design-agents",
+      "source": "./",
+      "description": "5 design agents for UI/UX, branding, visual storytelling, and delightful interactions",
+      "version": "2.2.0",
+      "author": {
+        "name": "dazeb",
+        "url": "https://github.com/dazeb"
+      },
+      "tags": ["design", "ui", "ux", "branding", "visual", "agents"],
+      "agents": [
+        "design/brand-guardian",
+        "design/ui-designer",
+        "design/ux-researcher",
+        "design/visual-storyteller",
+        "design/whimsy-injector"
+      ]
+    },
+    {
+      "name": "marketing-agents",
+      "source": "./",
+      "description": "7 marketing agents for content creation, growth hacking, and social media strategy",
+      "version": "2.2.0",
+      "author": {
+        "name": "dazeb",
+        "url": "https://github.com/dazeb"
+      },
+      "tags": ["marketing", "content", "growth", "social-media", "aso", "agents"],
+      "agents": [
+        "marketing/content-creator",
+        "marketing/growth-hacker",
+        "marketing/app-store-optimizer",
+        "marketing/instagram-curator",
+        "marketing/reddit-community-builder",
+        "marketing/tiktok-strategist",
+        "marketing/twitter-engager"
+      ]
+    },
+    {
+      "name": "product-pm-agents",
+      "source": "./",
+      "description": "6 product management agents for feedback analysis, prioritization, and project coordination",
+      "version": "2.2.0",
+      "author": {
+        "name": "dazeb",
+        "url": "https://github.com/dazeb"
+      },
+      "tags": ["product", "pm", "feedback", "prioritization", "experiments", "agents"],
+      "agents": [
+        "product/feedback-synthesizer",
+        "product/sprint-prioritizer",
+        "product/trend-researcher",
+        "project-management/experiment-tracker",
+        "project-management/project-shipper",
+        "project-management/studio-producer"
+      ]
+    },
+    {
+      "name": "operations-testing-agents",
+      "source": "./",
+      "description": "11 operations and testing agents for analytics, infrastructure, testing, and quality assurance",
+      "version": "2.2.0",
+      "author": {
+        "name": "dazeb",
+        "url": "https://github.com/dazeb"
+      },
+      "tags": ["operations", "testing", "analytics", "infrastructure", "qa", "agents"],
+      "agents": [
+        "studio-operations/analytics-reporter",
+        "studio-operations/finance-tracker",
+        "studio-operations/infrastructure-maintainer",
+        "studio-operations/legal-compliance-checker",
+        "studio-operations/support-responder",
+        "testing/api-tester",
+        "testing/performance-benchmarker",
+        "testing/test-results-analyzer",
+        "testing/tool-evaluator",
+        "testing/workflow-optimizer"
+      ]
+    },
+    {
+      "name": "essentials-bundle",
+      "source": "./",
+      "description": "Recommended starter bundle: Project Initializer + Web Development agents (8 total)",
+      "version": "2.2.0",
+      "author": {
+        "name": "dazeb",
+        "url": "https://github.com/dazeb"
+      },
+      "tags": ["bundle", "essentials", "recommended", "starter", "agents"],
+      "agents": [
+        "engineering/project-initializer",
+        "web-development/react-nextjs-specialist",
+        "web-development/api-integration-specialist",
+        "web-development/fullstack-web-developer",
+        "web-development/web-performance-optimizer",
+        "web-development/pwa-builder",
+        "web-development/css-tailwind-expert",
+        "web-development/static-site-specialist"
+      ]
+    }
+  ],
+  "keywords": [
+    "agents",
+    "ai-agents",
+    "claude-agents",
+    "web-development",
+    "engineering",
+    "design",
+    "marketing",
+    "product-management",
+    "long-running-agents",
+    "project-initializer"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dazeb/Long-Running-AI-Agents.git"
+  },
+  "license": "MIT"
+}

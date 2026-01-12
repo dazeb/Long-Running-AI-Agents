@@ -1,0 +1,118 @@
+{
+  "name": "long-running-ai-agents",
+  "version": "2.2.0",
+  "description": "Comprehensive collection of 43 specialized AI agents for Claude Code - covering web development, engineering, design, marketing, product, operations, and testing",
+  "author": {
+    "name": "dazeb",
+    "email": "[email protected]",
+    "url": "https://github.com/dazeb"
+  },
+  "homepage": "https://github.com/dazeb/Long-Running-AI-Agents",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dazeb/Long-Running-AI-Agents.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "agents",
+    "ai-agents",
+    "claude-agents",
+    "web-development",
+    "engineering",
+    "design",
+    "marketing",
+    "product-management",
+    "long-running-agents",
+    "project-initializer"
+  ],
+  "categories": [
+    "agents",
+    "productivity",
+    "development"
+  ],
+  "agents": {
+    "web-development": [
+      "react-nextjs-specialist",
+      "api-integration-specialist",
+      "fullstack-web-developer",
+      "web-performance-optimizer",
+      "pwa-builder",
+      "css-tailwind-expert",
+      "static-site-specialist"
+    ],
+    "engineering": [
+      "project-initializer",
+      "ai-engineer",
+      "backend-architect",
+      "devops-automator",
+      "frontend-developer",
+      "mobile-app-builder",
+      "rapid-prototyper"
+    ],
+    "design": [
+      "brand-guardian",
+      "ui-designer",
+      "ux-researcher",
+      "visual-storyteller",
+      "whimsy-injector"
+    ],
+    "marketing": [
+      "content-creator",
+      "growth-hacker",
+      "app-store-optimizer",
+      "instagram-curator",
+      "reddit-community-builder",
+      "tiktok-strategist",
+      "twitter-engager"
+    ],
+    "product": [
+      "feedback-synthesizer",
+      "sprint-prioritizer",
+      "trend-researcher"
+    ],
+    "project-management": [
+      "experiment-tracker",
+      "project-shipper",
+      "studio-producer"
+    ],
+    "studio-operations": [
+      "analytics-reporter",
+      "finance-tracker",
+      "infrastructure-maintainer",
+      "legal-compliance-checker",
+      "support-responder",
+      "telegram-notifier"
+    ],
+    "testing": [
+      "api-tester",
+      "performance-benchmarker",
+      "test-results-analyzer",
+      "tool-evaluator",
+      "workflow-optimizer"
+    ]
+  },
+  "bundles": {
+    "essentials": {
+      "description": "Recommended starter bundle: Project Initializer + Web Development agents",
+      "agents": [
+        "engineering/project-initializer",
+        "web-development/react-nextjs-specialist",
+        "web-development/api-integration-specialist",
+        "web-development/fullstack-web-developer",
+        "web-development/web-performance-optimizer",
+        "web-development/pwa-builder",
+        "web-development/css-tailwind-expert",
+        "web-development/static-site-specialist"
+      ]
+    }
+  },
+  "features": {
+    "longRunningAgents": true,
+    "projectInitializer": true,
+    "multiCategory": true,
+    "bundleSupport": true
+  },
+  "requirements": {
+    "claudeCode": ">=1.0.0"
+  }
+}

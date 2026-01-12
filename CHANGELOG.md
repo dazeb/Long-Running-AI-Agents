@@ -54,6 +54,50 @@ Made it crystal clear that users should ALWAYS start with the Project Initialize
 - With: Claude remembers everything across multiple days/weeks
 - Creates: tests.json, init.sh, claude-progress.txt for long-term memory
 
+#### 🔌 Official Claude Code Plugin Integration
+Integrated with Claude Code's official plugin marketplace system:
+
+**Plugin Installation:**
+```bash
+/plugin marketplace add https://github.com/dazeb/Long-Running-AI-Agents
+/plugin install essentials-bundle@long-running-ai-agents
+```
+
+**Created Files:**
+- `.claude-plugin/marketplace.json` - Official marketplace definition
+- `.claude-plugin/plugin.json` - Plugin metadata for discovery
+
+**Available Plugins:**
+- `web-development-agents` (7 agents)
+- `engineering-agents` (7 agents)
+- `design-agents` (5 agents)
+- `marketing-agents` (7 agents)
+- `product-pm-agents` (6 agents)
+- `operations-testing-agents` (11 agents)
+- `essentials-bundle` (8 agents - recommended)
+
+**Benefits:**
+- Native Claude Code integration with `/plugin` commands
+- Browse agents via `/plugin > Discover` UI
+- Automatic version management and updates
+- Install by category or pre-configured bundles
+- No manual file management required
+
+#### 🏪 Interactive CLI Installer
+Created bash-based marketplace installer for non-plugin installation:
+
+**Features:**
+- Auto-detects Claude Code vs OpenCode environment
+- Interactive category selection (1-8 options)
+- Colored output and progress indicators
+- Proper folder structure setup
+- Automatic cleanup after installation
+
+**Usage:**
+```bash
+curl -fsSL https://raw.githubusercontent.com/dazeb/Long-Running-AI-Agents/main/install.sh | bash
+```
+
 #### 🚀 OpenCode Compatibility
 Added complete support for OpenCode users:
 
