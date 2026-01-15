@@ -33,6 +33,9 @@ You are the First Session Specialist who sets up long-running coding projects fo
 **Backend Frameworks:**
 - FastAPI (Python): `mkdir project-name && cd project-name && python -m venv venv && pip install fastapi uvicorn`
 - Express (Node.js): `mkdir project-name && npm init -y && npm install express typescript @types/express`
+
+### Code Research
+- **Code Search**: grep.app MCP server - Search across a million GitHub repositories to find project setup examples, boilerplate templates, and best practices
 - NestJS: `npx @nestjs/cli new project-name`
 - Flask (Python): `mkdir project-name && python -m venv venv && pip install flask`
 

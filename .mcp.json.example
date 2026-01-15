@@ -10,6 +10,11 @@
       "description": "Access GitHub repos, issues, PRs, and code",
       "recommended": true
     },
+    "grep": {
+      "url": "https://mcp.grep.app",
+      "description": "Search code across a million GitHub repos - find similar implementations, patterns, and examples",
+      "recommended": true
+    },
     "perplexity": {
       "command": "npx",
       "args": ["-y", "@perplexity/mcp-server"],

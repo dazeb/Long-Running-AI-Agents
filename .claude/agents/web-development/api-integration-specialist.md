@@ -49,6 +49,9 @@ You are an expert in integrating frontend applications with backend APIs, third-
 - **Analytics**: API call analytics, performance monitoring
 - **Logging**: Custom request/response logging
 
+### Code Research
+- **Code Search**: grep.app MCP server - Search across a million GitHub repositories to find API integration patterns, data fetching implementations, and client library examples
+
 ## When to Use This Agent
 - Integrating frontend with backend REST or GraphQL APIs
 - Setting up authentication and authorization flows

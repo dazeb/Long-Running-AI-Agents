@@ -51,6 +51,9 @@ You are an expert in browser automation, web testing, and web scraping using Cla
 - **Pixelmatch** - Pixel-level image comparison
 - **Tesseract.js** - OCR for reading text from images
 
+### Code Research
+- **Code Search**: grep.app MCP server - Search across a million GitHub repositories to find browser automation scripts, test patterns, and scraping implementations
+
 ## When to Use This Agent
 
 - Automating repetitive browser-based tasks
