@@ -56,21 +56,21 @@ Interactive installer lets you choose which agents to install.
 ```bash
 # Clone into your project
 git clone https://github.com/dazeb/Long-Running-AI-Agents.git .claude
-
+```
+```
 # Use an agent
 # Just say: "@frontend-developer, build me a responsive navbar"
 ```
-
 That's it! Claude will now respond with frontend-specific best practices, modern tools, and avoid common pitfalls.
 
 ### Latest Updates
-- [Major overhaul to specialized set of agents](https://github.com/dazeb/Long-Running-AI-Agents/pull/20/changes/531fdbf8d54e62d8585211f394c95c2ef8e71228)
+- [Major overhaul to specialized set of agents](https://github.com/dazeb/Long-Running-AI-Agents/pull/20/changes/531fdbf8d54e62d8585211f394c95c2ef8e71228)  
 <details>
 <summary>🤖 <strong>AI Setup</strong></summary>
 
 > **Copy this WHOLE section and paste it into your AI agent's context and your AI will do the rest.**
 
----
+````
 
 ### AI Agent Setup Instructions
 
@@ -193,7 +193,8 @@ Read and apply these skills to ensure high-quality, systematic development.
 - **14 Composable Skills** for systematic development
 - **MIT Licensed**
 
----
+````
+
 
 </details>
 
