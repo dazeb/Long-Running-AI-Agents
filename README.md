@@ -64,6 +64,117 @@ git clone https://github.com/dazeb/Long-Running-AI-Agents.git .claude
 That's it! Claude will now respond with frontend-specific best practices, modern tools, and avoid common pitfalls.
 
 <details>
+<summary>🤖 <strong>AI Setup - For AI Agents</strong></summary>
+
+> **Copy this section and paste it into your AI agent's context to enable these specialized agents.**
+
+```markdown
+# AI Agent Setup Instructions
+
+You are being equipped with specialized agent capabilities from the Long-Running-AI-Agents repository.
+
+## Installation Steps
+
+1. **Clone the repository into the project's `.claude` directory:**
+   ```bash
+   git clone https://github.com/dazeb/Long-Running-AI-Agents.git .claude
+   ```
+
+2. **Verify installation:**
+   ```bash
+   ls .claude/agents/
+   ```
+   You should see directories for: engineering, web-development, design, marketing, product, project-management, studio-operations, and testing.
+
+3. **You now have access to 45+ specialized agents.** Reference them using the `@agent-name` syntax.
+
+## How to Use Agents
+
+When the user requests a task that matches an agent's expertise:
+
+1. **Identify the appropriate agent** from these categories:
+   - `@project-initializer` - ALWAYS use first for new projects (creates tracking files)
+   - `@react-nextjs-specialist` - Next.js apps, Server Components, App Router
+   - `@backend-architect` - APIs, databases, server-side architecture
+   - `@frontend-developer` - UI development with React/Vue/Svelte
+   - `@ai-engineer` - LLM integration, RAG systems, AI features
+   - `@devops-automator` - CI/CD, Docker, deployments
+   - `@api-tester` - API testing and contract validation
+   - `@performance-benchmarker` - Performance optimization
+   - And 37 more specialized agents...
+
+2. **Activate the agent** by reading its file:
+   ```bash
+   cat .claude/agents/[category]/[agent-name].md
+   ```
+
+3. **Apply the agent's expertise** to the task:
+   - Follow the agent's best practices
+   - Use recommended tools and technologies
+   - Avoid documented anti-patterns
+   - Apply systematic skills (TDD, debugging protocols, verification)
+
+## Critical: Project Initialization
+
+**For ANY new project, ALWAYS start with:**
+```bash
+cat .claude/agents/engineering/project-initializer.md
+```
+
+Then follow its guidance to create:
+- `tests.json` - Feature tracking and completion status
+- `init.sh` - Environment setup automation
+- `claude-progress.txt` - Session memory and decisions
+- Project structure and configurations
+
+These files enable long-term memory across sessions.
+
+## Agent Discovery
+
+To see all available agents:
+```bash
+find .claude/agents -name "*.md" -type f
+```
+
+To search for agents by capability:
+```bash
+grep -r "Use When" .claude/agents/
+```
+
+## Example Workflow
+
+User request: "Build a Next.js e-commerce site with Stripe integration"
+
+Your response:
+1. Activate `@project-initializer` - Set up project structure
+2. Activate `@react-nextjs-specialist` - Build Next.js app
+3. Activate `@api-integration-specialist` - Integrate Stripe API
+4. Activate `@api-tester` - Test payment endpoints
+5. Apply systematic skills throughout (TDD, verification, code review)
+
+## Skills System
+
+You also have access to 14 composable skills in `.claude/skills/`:
+- `test-driven-development.md` - RED-GREEN-REFACTOR workflow
+- `systematic-debugging.md` - Four-phase root cause analysis
+- `verification-before-completion.md` - Always verify before claiming done
+- `brainstorming.md` - Requirements exploration
+- `writing-plans.md` - Implementation planning
+- And 9 more systematic development workflows
+
+Read and apply these skills to ensure high-quality, systematic development.
+
+## Repository Information
+
+- **Source:** https://github.com/dazeb/Long-Running-AI-Agents
+- **45 Agents** across 8 categories
+- **14 Composable Skills** for systematic development
+- **MIT Licensed**
+```
+
+</details>
+
+<details>
 <summary>⚠️ <strong>Important: Start Every Project Right</strong></summary>
 
 > **🎯 ALWAYS begin with the [Project Initializer](.claude/agents/engineering/project-initializer.md) agent!**
