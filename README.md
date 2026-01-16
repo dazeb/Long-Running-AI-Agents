@@ -63,8 +63,6 @@ git clone https://github.com/dazeb/Long-Running-AI-Agents.git .claude
 
 That's it! Claude will now respond with frontend-specific best practices, modern tools, and avoid common pitfalls.
 
----
-
 <details>
 <summary>⚠️ <strong>Important: Start Every Project Right</strong></summary>
 
@@ -90,8 +88,6 @@ product catalog, shopping cart, and admin dashboard. Use PostgreSQL and Stripe."
 The Project Initializer will create your entire project structure, roadmap, and tracking files in minutes.
 
 </details>
-
----
 
 <details>
 <summary>🎯 <strong>What You Get</strong></summary>
@@ -124,8 +120,6 @@ Each agent knows:
 
 </details>
 
----
-
 <details>
 <summary>💡 <strong>Why Use These Agents?</strong></summary>
 
@@ -150,8 +144,6 @@ Claude: Creates form with:
 Agents turn general AI into domain experts.
 
 </details>
-
----
 
 <details>
 <summary>🚀 <strong>Claude Code 2.1 Features (NEW!)</strong></summary>
@@ -184,8 +176,6 @@ IDE-like intelligence for 11 languages. Go-to-definition in **50ms** (vs 45 seco
 📚 **[View LSP Setup Guide →](LSP_SETUP.md)**
 
 </details>
-
----
 
 <details>
 <summary>📚 <strong>Browse Agents</strong></summary>
@@ -260,8 +250,6 @@ IDE-like intelligence for 11 languages. Go-to-definition in **50ms** (vs 45 seco
 
 </details>
 
----
-
 <details>
 <summary>🚀 <strong>How to Use</strong></summary>
 
@@ -307,8 +295,6 @@ git clone https://github.com/dazeb/Long-Running-AI-Agents.git && mv Long-Running
 
 </details>
 
----
-
 <details>
 <summary>📱 <strong>Optional: Telegram Notifier</strong></summary>
 
@@ -341,8 +327,6 @@ node telegram-notifier.js approve "Deploy to production?"
 
 </details>
 
----
-
 <details>
 <summary>🤝 <strong>Contributing</strong></summary>
 
@@ -355,16 +339,12 @@ Want to add agents or improve existing ones? PRs welcome!
 
 </details>
 
----
-
 <details>
 <summary>📄 <strong>License</strong></summary>
 
 MIT License - use freely for personal or commercial projects.
 
 </details>
-
----
 
 <details>
 <summary>💬 <strong>FAQ</strong></summary>
@@ -389,8 +369,6 @@ For specialized tasks, yes! Agents provide domain expertise, know the right tool
 
 </details>
 
----
-
 <details>
 <summary>🚀 <strong>Quick Reference</strong></summary>
 
@@ -409,8 +387,6 @@ For specialized tasks, yes! Agents provide domain expertise, know the right tool
 **Ready to build?** Start with [@project-initializer](.claude/agents/engineering/project-initializer.md), then use specialized agents! 🚀
 
 </details>
-
----
 
 <details>
 <summary>📖 <strong>Advanced: Long-Running Agents Methodology</strong></summary>
@@ -843,8 +819,6 @@ We welcome contributions! Here's how to help:
 **[Read full advanced methodology documentation →](LONG_RUNNING_AGENTS.md)**
 
 </details>
-
----
 
 <details>
 <summary>🙏 <strong>Acknowledgments</strong></summary>
