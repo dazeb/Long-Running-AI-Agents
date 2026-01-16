@@ -65,7 +65,8 @@ That's it! Claude will now respond with frontend-specific best practices, modern
 
 ---
 
-## ⚠️ Important: Start Every Project Right
+<details>
+<summary><h2>⚠️ Important: Start Every Project Right</h2></summary>
 
 > **🎯 ALWAYS begin with the [Project Initializer](.claude/agents/engineering/project-initializer.md) agent!**
 
@@ -88,9 +89,12 @@ product catalog, shopping cart, and admin dashboard. Use PostgreSQL and Stripe."
 
 The Project Initializer will create your entire project structure, roadmap, and tracking files in minutes.
 
+</details>
+
 ---
 
-## 🎯 What You Get
+<details>
+<summary><h2>🎯 What You Get</h2></summary>
 
 **45 specialized agents** across different domains:
 
@@ -118,9 +122,12 @@ Each agent knows:
 - When to use them vs. other approaches
 - How to apply systematic skills for quality code
 
+</details>
+
 ---
 
-## 💡 Why Use These Agents?
+<details>
+<summary><h2>💡 Why Use These Agents?</h2></summary>
 
 **Without agents:**
 ```
@@ -142,9 +149,12 @@ Claude: Creates form with:
 
 Agents turn general AI into domain experts.
 
+</details>
+
 ---
 
-## 🚀 Claude Code 2.1 Features (NEW!)
+<details>
+<summary><h2>🚀 Claude Code 2.1 Features (NEW!)</h2></summary>
 
 Leverage the latest Claude Code capabilities:
 
@@ -173,9 +183,12 @@ IDE-like intelligence for 11 languages. Go-to-definition in **50ms** (vs 45 seco
 
 📚 **[View LSP Setup Guide →](LSP_SETUP.md)**
 
+</details>
+
 ---
 
-## 📚 Browse Agents
+<details>
+<summary><h2>📚 Browse Agents</h2></summary>
 
 ### 💻 Web Development (NEW!)
 | Agent | Use When |
@@ -245,9 +258,12 @@ IDE-like intelligence for 11 languages. Go-to-definition in **50ms** (vs 45 seco
 | [Tool Evaluator](.claude/agents/testing/tool-evaluator.md) | Build vs. buy decisions |
 | [Workflow Optimizer](.claude/agents/testing/workflow-optimizer.md) | Improving developer workflows |
 
+</details>
+
 ---
 
-## 🚀 How to Use
+<details>
+<summary><h2>🚀 How to Use</h2></summary>
 
 ### Option 1: Claude Code CLI (Recommended)
 ```bash
@@ -289,9 +305,12 @@ rm -rf Long-Running-AI-Agents
 git clone https://github.com/dazeb/Long-Running-AI-Agents.git && mv Long-Running-AI-Agents/.claude .opencode && mv .opencode/agents .opencode/agent && rm -rf Long-Running-AI-Agents
 ```
 
+</details>
+
 ---
 
-## 📱 Optional: Telegram Notifier
+<details>
+<summary><h2>📱 Optional: Telegram Notifier</h2></summary>
 
 Get notifications on your phone when Claude completes tasks or needs approval for important actions.
 
@@ -320,9 +339,12 @@ node telegram-notifier.js approve "Deploy to production?"
 
 📚 **[Full Documentation](.claude/tools/telegram-notifier/TELEGRAM_QUICK_START.md)**
 
+</details>
+
 ---
 
-## 🤝 Contributing
+<details>
+<summary><h2>🤝 Contributing</h2></summary>
 
 Want to add agents or improve existing ones? PRs welcome!
 
@@ -331,15 +353,21 @@ Want to add agents or improve existing ones? PRs welcome!
 3. Document anti-patterns (common mistakes)
 4. Submit PR with clear description
 
+</details>
+
 ---
 
-## 📄 License
+<details>
+<summary><h2>📄 License</h2></summary>
 
 MIT License - use freely for personal or commercial projects.
 
+</details>
+
 ---
 
-## 💬 FAQ
+<details>
+<summary><h2>💬 FAQ</h2></summary>
 
 **Q: Do I need to use the Project Initializer?**
 **YES, for best results!** Always start with [@project-initializer](.claude/agents/engineering/project-initializer.md). It creates tracking files that give Claude long-term memory across sessions. Without it, Claude forgets context after long conversations.
@@ -359,9 +387,12 @@ Yes! See Option 3 in the "How to Use" section for setup instructions. You'll nee
 **Q: Are these better than generic Claude?**
 For specialized tasks, yes! Agents provide domain expertise, know the right tools, and avoid common mistakes.
 
+</details>
+
 ---
 
-## 🚀 Quick Reference
+<details>
+<summary><h2>🚀 Quick Reference</h2></summary>
 
 ```
 ┌─────────────────────────────────────────────┐
@@ -376,6 +407,8 @@ For specialized tasks, yes! Agents provide domain expertise, know the right tool
 ```
 
 **Ready to build?** Start with [@project-initializer](.claude/agents/engineering/project-initializer.md), then use specialized agents! 🚀
+
+</details>
 
 ---
 
@@ -813,7 +846,8 @@ We welcome contributions! Here's how to help:
 
 ---
 
-## 🙏 Acknowledgments
+<details>
+<summary><h2>🙏 Acknowledgments</h2></summary>
 
 This project builds upon exceptional work from the AI agent development community:
 
@@ -831,6 +865,8 @@ The comprehensive skills system (`.claude/skills/`) is adapted from **[obra/supe
 These skills transform our agents from knowledge repositories into systematic, quality-focused development partners. Huge thanks to [@obra](https://github.com/obra) for creating and sharing this invaluable resource with the community.
 
 📚 **[Explore the skills system →](.claude/skills/README.md)**
+
+</details>
 
 ---
 
