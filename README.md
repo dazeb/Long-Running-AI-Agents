@@ -1,6 +1,6 @@
-# 🤖 Claude AI Agents
+# Long Running AI Agents
 
-**Ready-to-use AI agent templates that make Claude smarter at specific tasks.**
+**Using Anthropic's Official methodology and best practice we have created ready-to-use AI agent templates that make Claude smarter at specific tasks.**
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![20 Agents](https://img.shields.io/badge/Agents-20-blue.svg)]()
@@ -63,6 +63,8 @@ git clone https://github.com/dazeb/Long-Running-AI-Agents.git .claude
 
 That's it! Claude will now respond with frontend-specific best practices, modern tools, and avoid common pitfalls.
 
+### Latest Updates
+- [Major overhaul to specialized set of agents](https://github.com/dazeb/Long-Running-AI-Agents/pull/20/changes/531fdbf8d54e62d8585211f394c95c2ef8e71228)
 <details>
 <summary>🤖 <strong>AI Setup</strong></summary>
 
