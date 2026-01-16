@@ -199,7 +199,7 @@ Read and apply these skills to ensure high-quality, systematic development.
 </details>
 
 <details>
-<summary><strong>Start Every Project Right</strong></summary>
+<summary>⚡️ <strong>Start Every Project Right</strong></summary>
 
 **We recommend starting with the [Project Initializer](.claude/agents/engineering/project-initializer.md) agent for new projects.**
 
