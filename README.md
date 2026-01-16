@@ -1,6 +1,6 @@
 # Long Running AI Agents
 
-**Using Anthropic's Official methodology and best practice we have created ready-to-use AI agent templates that make Claude smarter at specific tasks.**
+**Using Anthropic's Official methodology and best practices we have created ready-to-use AI agent templates that make Claude smarter at specific tasks.**
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![20 Agents](https://img.shields.io/badge/Agents-20-blue.svg)]()
