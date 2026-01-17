@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-# Claude AI Agents - Interactive Installer
+# ClaudePlaybook - Interactive Installer
 # https://github.com/dazeb/ClaudePlaybook
 
 VERSION="2.2.0"
@@ -25,7 +25,7 @@ print_warning() { echo -e "${YELLOW}⚠${NC} $1"; }
 print_header() {
     echo ""
     echo "╔════════════════════════════════════════════════════════╗"
-    echo "║         Claude AI Agents - Marketplace Installer       ║"
+    echo "║           ClaudePlaybook - Marketplace Installer       ║"
     echo "║                   Version $VERSION                        ║"
     echo "╚════════════════════════════════════════════════════════╝"
     echo ""
