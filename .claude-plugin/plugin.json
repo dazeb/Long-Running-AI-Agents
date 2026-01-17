@@ -1,5 +1,5 @@
 {
-  "name": "long-running-ai-agents",
+  "name": "claude-playbook",
   "version": "2.3.0",
   "description": "Comprehensive collection of 45 specialized AI agents for Claude Code with Hooks, MCP, and LSP integration - covering web development, engineering, design, marketing, product, operations, and testing",
   "author": {
@@ -7,10 +7,10 @@
     "email": "[email protected]",
     "url": "https://github.com/dazeb"
   },
-  "homepage": "https://github.com/dazeb/Long-Running-AI-Agents",
+  "homepage": "https://github.com/dazeb/ClaudePlaybook",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dazeb/Long-Running-AI-Agents.git"
+    "url": "https://github.com/dazeb/ClaudePlaybook.git"
   },
   "license": "MIT",
   "keywords": [

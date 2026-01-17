@@ -12,15 +12,15 @@
 
 ```bash
 # Add marketplace to Claude Code
-/plugin marketplace add https://github.com/dazeb/Long-Running-AI-Agents
+/plugin marketplace add https://github.com/dazeb/ClaudePlaybook
 
 # Install by category
-/plugin install web-development-agents@long-running-ai-agents
-/plugin install engineering-agents@long-running-ai-agents
-/plugin install design-agents@long-running-ai-agents
+/plugin install web-development-agents@claude-playbook
+/plugin install engineering-agents@claude-playbook
+/plugin install design-agents@claude-playbook
 
 # Or install essentials bundle (recommended for starters)
-/plugin install essentials-bundle@long-running-ai-agents
+/plugin install essentials-bundle@claude-playbook
 
 # Browse all available plugins
 /plugin > Discover
@@ -36,7 +36,7 @@
 ### Method 2: CLI Installer
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/dazeb/Long-Running-AI-Agents/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/dazeb/ClaudePlaybook/main/install.sh | bash
 ```
 
 This interactive installer will:
@@ -54,10 +54,10 @@ This interactive installer will:
 **For Claude Code:**
 ```bash
 # Download and run installer
-curl -fsSL https://raw.githubusercontent.com/dazeb/Long-Running-AI-Agents/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/dazeb/ClaudePlaybook/main/install.sh | bash
 
 # Or download first, then run
-curl -fsSL https://raw.githubusercontent.com/dazeb/Long-Running-AI-Agents/main/install.sh -o install.sh
+curl -fsSL https://raw.githubusercontent.com/dazeb/ClaudePlaybook/main/install.sh -o install.sh
 chmod +x install.sh
 ./install.sh
 ```
@@ -65,29 +65,29 @@ chmod +x install.sh
 **For OpenCode:**
 ```bash
 # Same installer, it will auto-detect or ask which tool you're using
-curl -fsSL https://raw.githubusercontent.com/dazeb/Long-Running-AI-Agents/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/dazeb/ClaudePlaybook/main/install.sh | bash
 ```
 
 ### Method 2: Manual Installation
 
 **Claude Code:**
 ```bash
-git clone https://github.com/dazeb/Long-Running-AI-Agents.git .claude
+git clone https://github.com/dazeb/ClaudePlaybook.git .claude
 ```
 
 **OpenCode:**
 ```bash
-git clone https://github.com/dazeb/Long-Running-AI-Agents.git
-mv Long-Running-AI-Agents/.claude .opencode
+git clone https://github.com/dazeb/ClaudePlaybook.git
+mv ClaudePlaybook/.claude .opencode
 mv .opencode/agents .opencode/agent
-rm -rf Long-Running-AI-Agents
+rm -rf ClaudePlaybook
 ```
 
 ### Method 3: Git Submodule (For version control)
 
 ```bash
 # Add as submodule
-git submodule add https://github.com/dazeb/Long-Running-AI-Agents.git .claude
+git submodule add https://github.com/dazeb/ClaudePlaybook.git .claude
 
 # Update to latest
 git submodule update --remote .claude
@@ -117,7 +117,7 @@ Perfect for modern web development with React, Next.js, and more.
 
 # Or manually
 git clone --depth 1 --filter=blob:none --sparse \
-  https://github.com/dazeb/Long-Running-AI-Agents.git .claude
+  https://github.com/dazeb/ClaudePlaybook.git .claude
 cd .claude
 git sparse-checkout set agents/web-development
 ```
@@ -220,7 +220,7 @@ Testing, analytics, finance, and operations.
 ### Update with Installer
 ```bash
 # Re-run installer and select categories
-curl -fsSL https://raw.githubusercontent.com/dazeb/Long-Running-AI-Agents/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/dazeb/ClaudePlaybook/main/install.sh | bash
 ```
 
 ### Update Manually
@@ -338,7 +338,7 @@ Don't install all 43 agents at once. Start with:
 ### Tip 2: Use Git Submodules for Teams
 If working in a team, use git submodules so everyone has the same agent versions:
 ```bash
-git submodule add https://github.com/dazeb/Long-Running-AI-Agents.git .claude
+git submodule add https://github.com/dazeb/ClaudePlaybook.git .claude
 git commit -m "Add Claude AI Agents"
 ```
 
@@ -351,7 +351,7 @@ cd .claude && git pull origin main
 ### Tip 4: Customize for Your Team
 Fork the repository and customize agents for your stack:
 ```bash
-git clone https://github.com/dazeb/Long-Running-AI-Agents.git my-custom-agents
+git clone https://github.com/dazeb/ClaudePlaybook.git my-custom-agents
 # Edit agents to match your needs
 # Install from your fork
 ```
@@ -363,7 +363,7 @@ git clone https://github.com/dazeb/Long-Running-AI-Agents.git my-custom-agents
 ### Issue: "command not found: curl"
 **Solution:** Install curl or use git clone:
 ```bash
-git clone https://github.com/dazeb/Long-Running-AI-Agents.git .claude
+git clone https://github.com/dazeb/ClaudePlaybook.git .claude
 ```
 
 ### Issue: Agents not showing up in Claude Code
@@ -395,7 +395,7 @@ We're building a web interface where you can:
 - Copy installation commands
 - See agent ratings and downloads
 
-**Preview URL:** https://dazeb.github.io/Long-Running-AI-Agents/marketplace
+**Preview URL:** https://dazeb.github.io/ClaudePlaybook/marketplace
 
 ---
 
@@ -445,9 +445,9 @@ Want to add your own agents to the marketplace?
 
 ## 💬 Support
 
-**Documentation:** https://github.com/dazeb/Long-Running-AI-Agents
-**Issues:** https://github.com/dazeb/Long-Running-AI-Agents/issues
-**Discussions:** https://github.com/dazeb/Long-Running-AI-Agents/discussions
+**Documentation:** https://github.com/dazeb/ClaudePlaybook
+**Issues:** https://github.com/dazeb/ClaudePlaybook/issues
+**Discussions:** https://github.com/dazeb/ClaudePlaybook/discussions
 
 ---
 

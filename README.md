@@ -1,6 +1,6 @@
-# Long Running AI Agents
+# ClaudePlaybook
 
-**Using Anthropic's Official methodology and best practices we have created ready-to-use AI agent templates that make Claude smarter at specific tasks.**
+**Your comprehensive playbook of systematic AI agents. Using Anthropic's Official methodology, we provide ready-to-use agent templates with complete workflows that make Claude smarter at specific development tasks.**
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![20 Agents](https://img.shields.io/badge/Agents-20-blue.svg)]()
@@ -32,14 +32,14 @@
 ### 🔌 Option A: Plugin Marketplace (Best - Official Integration)
 ```bash
 # Add the marketplace to Claude Code
-/plugin marketplace add https://github.com/dazeb/Long-Running-AI-Agents
+/plugin marketplace add https://github.com/dazeb/ClaudePlaybook
 
 # Install specific category
-/plugin install web-development-agents@long-running-ai-agents
-/plugin install engineering-agents@long-running-ai-agents
+/plugin install web-development-agents@claude-playbook
+/plugin install engineering-agents@claude-playbook
 
 # Or install the essentials bundle (recommended for starters)
-/plugin install essentials-bundle@long-running-ai-agents
+/plugin install essentials-bundle@claude-playbook
 
 # Browse all available plugins
 /plugin > Discover
@@ -47,7 +47,7 @@
 
 ### 🏪 Option B: CLI Installer (Quick & Easy)
 ```bash
-curl -fsSL https://raw.githubusercontent.com/dazeb/Long-Running-AI-Agents/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/dazeb/ClaudePlaybook/main/install.sh | bash
 ```
 Interactive installer lets you choose which agents to install.
 
@@ -56,7 +56,7 @@ Interactive installer lets you choose which agents to install.
 ### Option C: Manual Install
 ```bash
 # Clone into your project
-git clone https://github.com/dazeb/Long-Running-AI-Agents.git .claude
+git clone https://github.com/dazeb/ClaudePlaybook.git .claude
 ```
 ```
 # Use an agent
@@ -83,7 +83,7 @@ That's it! Claude will now respond with frontend-specific best practices, modern
   - 🔍 `tool-evaluator` - Build vs. buy analysis, TCO modeling, vendor selection
   - ⚡ `workflow-optimizer` - SDLC optimization, CI/CD improvement, DORA metrics
   - 🛠️ `infrastructure-maintainer` - Internal tooling, access control, team productivity
-- [Major overhaul to specialized set of agents](https://github.com/dazeb/Long-Running-AI-Agents/pull/20/changes/531fdbf8d54e62d8585211f394c95c2ef8e71228)
+- [Major overhaul to specialized set of agents](https://github.com/dazeb/ClaudePlaybook/pull/20/changes/531fdbf8d54e62d8585211f394c95c2ef8e71228)
 <details>
 <summary>🤖 <strong>AI Setup</strong></summary>
 
@@ -93,13 +93,13 @@ That's it! Claude will now respond with frontend-specific best practices, modern
 
 ### AI Agent Setup Instructions
 
-You are being equipped with specialized agent capabilities from the Long-Running-AI-Agents repository.
+You are being equipped with specialized agent capabilities from the ClaudePlaybook repository.
 
 #### Installation Steps
 
 1. **Clone the repository into the project's `.claude` directory:**
    ```bash
-   git clone https://github.com/dazeb/Long-Running-AI-Agents.git .claude
+   git clone https://github.com/dazeb/ClaudePlaybook.git .claude
    ```
 
 2. **Verify installation:**
@@ -207,7 +207,7 @@ Read and apply these skills to ensure high-quality, systematic development.
 
 #### Repository Information
 
-- **Source:** https://github.com/dazeb/Long-Running-AI-Agents
+- **Source:** https://github.com/dazeb/ClaudePlaybook
 - **20 Focused Development Agents** across 4 categories
 - **14 Composable Skills** for systematic development
 - **MIT Licensed**
@@ -386,7 +386,7 @@ IDE-like intelligence for 11 languages. Go-to-definition in **50ms** (vs 45 seco
 ### Option 1: Claude Code CLI (Recommended)
 ```bash
 # Clone into your project
-git clone https://github.com/dazeb/Long-Running-AI-Agents.git .claude
+git clone https://github.com/dazeb/ClaudePlaybook.git .claude
 
 # Agents are auto-discovered. Just reference them:
 # "@react-nextjs-specialist, build a user profile page"
@@ -405,14 +405,14 @@ OpenCode uses a different folder structure (`.opencode/agent/` instead of `.clau
 **Quick setup:**
 ```bash
 # Clone the repo
-git clone https://github.com/dazeb/Long-Running-AI-Agents.git
+git clone https://github.com/dazeb/ClaudePlaybook.git
 
 # Rename folders for OpenCode
-mv Long-Running-AI-Agents/.claude .opencode
+mv ClaudePlaybook/.claude .opencode
 mv .opencode/agents .opencode/agent
 
 # Clean up
-rm -rf Long-Running-AI-Agents
+rm -rf ClaudePlaybook
 
 # Agents are now auto-discovered in OpenCode!
 # Use them the same way: "@react-nextjs-specialist, ..."
@@ -420,7 +420,7 @@ rm -rf Long-Running-AI-Agents
 
 **One-liner setup:**
 ```bash
-git clone https://github.com/dazeb/Long-Running-AI-Agents.git && mv Long-Running-AI-Agents/.claude .opencode && mv .opencode/agents .opencode/agent && rm -rf Long-Running-AI-Agents
+git clone https://github.com/dazeb/ClaudePlaybook.git && mv ClaudePlaybook/.claude .opencode && mv .opencode/agents .opencode/agent && rm -rf ClaudePlaybook
 ```
 
 </details>

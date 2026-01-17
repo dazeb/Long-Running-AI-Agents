@@ -232,8 +232,8 @@ Integrated with Claude Code's official plugin marketplace system:
 
 **Plugin Installation:**
 ```bash
-/plugin marketplace add https://github.com/dazeb/Long-Running-AI-Agents
-/plugin install essentials-bundle@long-running-ai-agents
+/plugin marketplace add https://github.com/dazeb/ClaudePlaybook
+/plugin install essentials-bundle@claude-playbook
 ```
 
 **Created Files:**
@@ -312,7 +312,7 @@ Created bash-based marketplace installer for non-plugin installation:
 
 **Usage:**
 ```bash
-curl -fsSL https://raw.githubusercontent.com/dazeb/Long-Running-AI-Agents/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/dazeb/ClaudePlaybook/main/install.sh | bash
 ```
 
 #### 🤖 Agent Creator Meta-Agent
@@ -356,10 +356,10 @@ Added complete support for OpenCode users:
 
 **Example one-liner:**
 ```bash
-git clone https://github.com/dazeb/Long-Running-AI-Agents.git && \
-mv Long-Running-AI-Agents/.claude .opencode && \
+git clone https://github.com/dazeb/ClaudePlaybook.git && \
+mv ClaudePlaybook/.claude .opencode && \
 mv .opencode/agents .opencode/agent && \
-rm -rf Long-Running-AI-Agents
+rm -rf ClaudePlaybook
 ```
 
 ### Technical Improvements

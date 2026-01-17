@@ -2,10 +2,10 @@
 set -e
 
 # Claude AI Agents - Interactive Installer
-# https://github.com/dazeb/Long-Running-AI-Agents
+# https://github.com/dazeb/ClaudePlaybook
 
 VERSION="2.2.0"
-REPO_URL="https://github.com/dazeb/Long-Running-AI-Agents.git"
+REPO_URL="https://github.com/dazeb/ClaudePlaybook.git"
 TEMP_DIR="/tmp/claude-agents-$$"
 
 # Colors for output
@@ -211,7 +211,7 @@ show_next_steps() {
     echo ""
     echo "═══════════════════════════════════════════════════════"
     echo ""
-    echo "📚 Full docs: https://github.com/dazeb/Long-Running-AI-Agents"
+    echo "📚 Full docs: https://github.com/dazeb/ClaudePlaybook"
     echo ""
 }
 
