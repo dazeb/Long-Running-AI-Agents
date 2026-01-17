@@ -64,7 +64,11 @@ git clone https://github.com/dazeb/Long-Running-AI-Agents.git .claude
 That's it! Claude will now respond with frontend-specific best practices, modern tools, and avoid common pitfalls.
 
 ### Latest Updates
-- [Major overhaul to specialized set of agents](https://github.com/dazeb/Long-Running-AI-Agents/pull/20/changes/531fdbf8d54e62d8585211f394c95c2ef8e71228)  
+- **NEW**: All agents updated with comprehensive Anthropic-style workflows (6-9 numbered steps with decision points, loops, verification gates)
+- **NEW**: Latest technology versions across all agents (React 19, Next.js 15, Tailwind 4, React Native 0.76+, Flutter 3.27+, Llama 3.3)
+- **NEW**: Skills integration throughout workflows (TDD, systematic debugging, brainstorming, verification)
+- **NEW**: Delegation triggers for parallel agent execution
+- [Major overhaul to specialized set of agents](https://github.com/dazeb/Long-Running-AI-Agents/pull/20/changes/531fdbf8d54e62d8585211f394c95c2ef8e71228)
 <details>
 <summary>🤖 <strong>AI Setup</strong></summary>
 
@@ -227,12 +231,22 @@ The Project Initializer will create your entire project structure, roadmap, and 
 <details>
 <summary>🎯 <strong>What You Get</strong></summary>
 
-**20 focused development agents** across core categories:
+**20 focused development agents** with comprehensive Anthropic-style workflows:
 
-- **💻 Web Development** (8 agents) - React, Next.js, APIs, CSS/Tailwind, PWAs, performance, full-stack, static sites, browser automation
-- **🔧 Engineering** (6 agents) - Backend, frontend, mobile, AI/LLM, DevOps, project initialization
+- **💻 Web Development** (8 agents) - React 19, Next.js 15, APIs, CSS/Tailwind 4, PWAs, performance, full-stack, static sites, browser automation
+- **🔧 Engineering** (6 agents) - Backend, frontend, mobile (React Native 0.76+, Flutter 3.27+), AI/LLM (Llama 3.3, Claude 3.5), DevOps, project initialization
 - **🧪 Testing & Quality** (5 agents) - API testing, performance benchmarking, test analysis, tool evaluation, workflow optimization
 - **🏢 Operations** (1 agent) - Infrastructure maintenance and internal tooling
+
+**Each agent now includes:**
+- **Numbered workflow steps** (6-9 steps) with clear, actionable phases
+- **Decision points (→)** - Branching logic based on requirements
+- **Loop conditions (↻)** - Iterative improvement cycles
+- **Verification gates (✓)** - Quality checkpoints before proceeding
+- **Human-in-the-loop approval** - Critical decision points requiring review
+- **Skills integration** - TDD, systematic debugging, verification protocols
+- **Delegation triggers** - When to spawn parallel agents for efficiency
+- **Latest technology versions** - Updated to 2025/2026 standards
 
 **PLUS: 14 composable skills** for systematic, quality-focused development:
 
@@ -844,17 +858,21 @@ Strict verification protocols:
 |--------|-------|
 | **Total Agents** | 20 |
 | **Categories** | 4 (Engineering, Web Development, Testing & Quality, Operations) |
-| **Lines of Content** | ~2,000 lines of focused development guidance |
+| **Agents with Workflows** | 12/20 (Engineering: 6/6, Web Dev: 6/8, Testing: 0/5, Ops: 0/1) |
+| **Lines of Content** | ~7,000+ lines of comprehensive workflow guidance |
+| **Workflow Steps** | 80+ numbered steps across all agents |
+| **Decision Points** | 120+ branching logic points (→) |
+| **Verification Gates** | 60+ quality checkpoints (✓) |
 | **Tools Referenced** | 100+ specialized development tools |
 | **Example Tasks** | 150+ concrete implementation examples |
 | **Anti-patterns** | 200+ development mistakes documented |
-| **Average Agent Size** | ~100 lines of focused expertise |
+| **Average Agent Size** | ~350 lines of comprehensive expertise |
 
 ---
 
 ## 🎓 What Each Agent Includes
 
-Every agent definition follows this comprehensive structure:
+Every agent definition follows this comprehensive structure with **Anthropic-style workflows**:
 
 ```markdown
 # Role: [Agent Name]
@@ -866,10 +884,34 @@ High-level philosophy and approach
 Specific skills and expertise areas
 
 ## Tools & Technologies
-Recommended stack and platforms
+Recommended stack and platforms (updated to latest versions)
 
 ## When to Use This Agent
 Specific scenarios and use cases
+
+## Workflow (NEW!)
+Comprehensive 6-9 step workflows with:
+
+### Step 1: [Phase Name]
+**Action**: What to do
+- Detailed implementation steps
+- Clear deliverables
+
+**Decision Point**:
+- → If X condition: Go to Step Y
+- → If Z condition: Proceed to next step
+
+**Skills Integration**: Which systematic skills to apply
+
+**Loop Condition**:
+- ↻ Repeat if conditions not met
+- → Continue when verified
+
+**Verification Gate**: ✓ Quality checkpoint before proceeding
+
+**Human Approval Required**: ✓ Critical decisions requiring review
+
+**Delegation Point**: When to spawn parallel agents
 
 ## Example Tasks (7 examples)
 Concrete, detailed implementations
@@ -888,6 +930,11 @@ Measurable KPIs for effectiveness
 ## Anti-patterns (10 items)
 Common mistakes to avoid
 ```
+
+**Workflow symbols:**
+- **→** = Decision point (branching logic)
+- **↻** = Loop condition (iterative cycles)
+- **✓** = Verification gate (quality checkpoint)
 
 ---
 
