@@ -78,15 +78,6 @@ That's it! Claude will now respond with frontend-specific best practices, modern
 - **NEW**: Latest technology versions across all agents (React 19, Next.js 15, Tailwind 4, React Native 0.76+, Flutter 3.27+, Llama 3.3)
 - **NEW**: Skills integration throughout workflows (TDD, systematic debugging, brainstorming, verification)
 - **NEW**: Delegation triggers for parallel agent execution across all agents
-- **🆕 Just Added**: Complete workflow implementations for 8 final agents:
-  - 🌐 `static-site-specialist` - JAMstack sites with SSG selection, CMS integration, performance optimization
-  - 🤖 `browser-automation-specialist` - E2E testing, web scraping, Playwright/Puppeteer automation
-  - 🔌 `api-tester` - Comprehensive API testing with contract validation and security testing
-  - 📊 `performance-benchmarker` - Load testing, bottleneck analysis, scalability validation
-  - 📈 `test-results-analyzer` - Quality insights, flaky test detection, release readiness
-  - 🔍 `tool-evaluator` - Build vs. buy analysis, TCO modeling, vendor selection
-  - ⚡ `workflow-optimizer` - SDLC optimization, CI/CD improvement, DORA metrics
-  - 🛠️ `infrastructure-maintainer` - Internal tooling, access control, team productivity
 - [Major overhaul to specialized set of agents](https://github.com/dazeb/ClaudePlaybook/pull/20/changes/531fdbf8d54e62d8585211f394c95c2ef8e71228)
 
 ---
