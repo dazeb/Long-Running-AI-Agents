@@ -1,3 +1,5 @@
+<div align="center">
+
 # ClaudePlaybook
 
 **Your comprehensive playbook of systematic AI agents. Using Anthropic's Official methodology, we provide ready-to-use agent templates with complete workflows that make Claude smarter at specific development tasks.**
@@ -11,6 +13,8 @@
 [![Hooks](https://img.shields.io/badge/Hooks-4_Templates-purple.svg)]()
 [![MCP](https://img.shields.io/badge/MCP-15+_Servers-orange.svg)]()
 [![LSP](https://img.shields.io/badge/LSP-11_Languages-green.svg)]()
+
+</div>
 
 ---
 
