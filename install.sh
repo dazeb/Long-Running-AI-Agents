@@ -128,7 +128,7 @@ show_categories() {
 # Install agents
 install_category() {
     local category=$1
-    local source_dir="$TEMP_DIR/.claude/agents"
+    local source_dir="$TEMP_DIR/agent"
     local dest_dir="$TARGET_DIR/$AGENTS_DIR"
 
     # Create target directory if it doesn't exist
