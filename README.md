@@ -7,7 +7,7 @@
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![20 Agents](https://img.shields.io/badge/Agents-20-blue.svg)]()
 [![100% Workflows](https://img.shields.io/badge/Workflows-20/20_Complete-brightgreen.svg)]()
-[![14 Skills](https://img.shields.io/badge/Skills-14-brightgreen.svg)](.claude/skills/README.md)
+[![17 Skills](https://img.shields.io/badge/Skills-17-brightgreen.svg)](.claude/skills/README.md)
 [![Works with Claude Code](https://img.shields.io/badge/Claude_Code-Compatible-blue.svg)]()
 [![Works with OpenCode](https://img.shields.io/badge/OpenCode-Compatible-orange.svg)]()
 [![Hooks](https://img.shields.io/badge/Hooks-4_Templates-purple.svg)]()
@@ -88,6 +88,57 @@ That's it! Claude will now respond with frontend-specific best practices, modern
   - ⚡ `workflow-optimizer` - SDLC optimization, CI/CD improvement, DORA metrics
   - 🛠️ `infrastructure-maintainer` - Internal tooling, access control, team productivity
 - [Major overhaul to specialized set of agents](https://github.com/dazeb/ClaudePlaybook/pull/20/changes/531fdbf8d54e62d8585211f394c95c2ef8e71228)
+
+---
+
+## 🎯 Skills & Hooks
+
+### 🛠️ 17 Composable Skills
+
+Specialized workflows that make agents systematic and quality-focused. Skills are automatically available to all agents.
+
+#### 🚀 Development Skills
+- **test-driven-development** - RED-GREEN-REFACTOR cycle for bulletproof code
+- **systematic-debugging** - Four-phase root cause analysis (gather, analyze, fix, verify)
+- **verification-before-completion** - Never claim done without running verification
+- **brainstorming** - Requirements exploration before implementation
+- **writing-plans** - Break complex tasks into actionable steps
+- **executing-plans** - Execute multi-step plans with review checkpoints
+
+#### 🎨 Frontend & Performance (NEW!)
+- **react-best-practices** - 45 performance rules from Vercel Engineering
+- **web-design-guidelines** - 100+ accessibility and UX compliance rules
+- **vercel-deploy** - Instant deployment with auto-framework detection
+
+#### 🤝 Collaboration Skills
+- **requesting-code-review** - Systematic review requests with context
+- **receiving-code-review** - Handle feedback with technical rigor
+- **dispatching-parallel-agents** - Coordinate multiple agents on independent tasks
+- **subagent-driven-development** - Execute implementation plans in current session
+
+#### 🔄 Workflow Skills
+- **using-git-worktrees** - Isolated git worktrees for feature work
+- **finishing-a-development-branch** - Structured options for merge/PR/cleanup
+
+#### 🎓 Meta Skills
+- **using-superpowers** - Introduction to the skills system
+- **writing-skills** - Create new skills with proper structure
+
+📚 **[View Complete Skills Documentation →](.claude/skills/README.md)**
+
+### 🪝 4 Hook Templates
+
+Automate workflows that run in response to events (editing files, git operations, session end):
+
+- **post-edit-format.sh** - Auto-format 12+ languages after every file edit
+- **pre-git-safety.sh** - Block dangerous git operations (force push, protected files)
+- **stop-session-summary.sh** - Generate session reports with statistics
+- **post-tests-update.sh** - Auto-update tests.json after test runs
+
+📚 **[View Hooks Documentation →](.claude/hooks/README.md)**
+
+---
+
 <details>
 <summary>🤖 <strong>AI Setup</strong></summary>
 
@@ -199,12 +250,15 @@ Your response:
 
 #### Skills System
 
-You also have access to 14 composable skills in `.claude/skills/`:
+You also have access to 17 composable skills in `.claude/skills/`:
 - `test-driven-development.md` - RED-GREEN-REFACTOR workflow
 - `systematic-debugging.md` - Four-phase root cause analysis
 - `verification-before-completion.md` - Always verify before claiming done
 - `brainstorming.md` - Requirements exploration
 - `writing-plans.md` - Implementation planning
+- `react-best-practices/` - 45 performance rules from Vercel Engineering
+- `web-design-guidelines/` - 100+ accessibility and UX compliance rules
+- `vercel-deploy/` - Instant deployment to Vercel
 - And 9 more systematic development workflows
 
 Read and apply these skills to ensure high-quality, systematic development.
@@ -213,7 +267,7 @@ Read and apply these skills to ensure high-quality, systematic development.
 
 - **Source:** https://github.com/dazeb/ClaudePlaybook
 - **20 Focused Development Agents** across 4 categories
-- **14 Composable Skills** for systematic development
+- **17 Composable Skills** for systematic development
 - **MIT Licensed**
 
 ````
@@ -269,9 +323,10 @@ The Project Initializer will create your entire project structure, roadmap, and 
 
 **This is a truly agentic system** - Every agent knows exactly how to work systematically, when to delegate, and how to ensure quality at every step.
 
-**PLUS: 14 composable skills** for systematic, quality-focused development:
+**PLUS: 17 composable skills** for systematic, quality-focused development:
 
 - **🛠️ Development** - TDD, systematic debugging, verification protocols
+- **🎨 Frontend & Performance** - React/Next.js optimization, web design guidelines, Vercel deployment
 - **📋 Planning** - Brainstorming, plan writing, execution workflows
 - **🤝 Collaboration** - Parallel agents, code review, multi-stage review
 - **🔄 Workflow** - Git worktrees, branch management
@@ -998,14 +1053,21 @@ This project builds upon exceptional work from the AI agent development communit
 Built on [Anthropic's research on effective agents](https://www.anthropic.com/research/building-effective-agents) and inspired by modern DevOps practices.
 
 ### 🛠️ Skills System
-The comprehensive skills system (`.claude/skills/`) is adapted from **[obra/superpowers](https://github.com/obra/superpowers)** - a battle-tested collection of systematic development methodologies including:
+The comprehensive skills system (`.claude/skills/`) combines two exceptional sources:
+
+**[obra/superpowers](https://github.com/obra/superpowers)** - Battle-tested systematic development methodologies:
 - Test-Driven Development (RED-GREEN-REFACTOR cycle)
 - Systematic Debugging (four-phase root cause analysis)
 - Brainstorming & Planning workflows
 - Code Review & Collaboration protocols
 - Git Worktrees & Branch management
 
-These skills transform our agents from knowledge repositories into systematic, quality-focused development partners. Huge thanks to [@obra](https://github.com/obra) for creating and sharing this invaluable resource with the community.
+**[vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills)** - Frontend performance and deployment skills:
+- React/Next.js performance optimization (45 rules across 8 categories)
+- Web design guidelines (100+ accessibility and UX rules)
+- Vercel deployment automation (40+ framework support)
+
+These skills transform our agents from knowledge repositories into systematic, quality-focused development partners. Huge thanks to [@obra](https://github.com/obra) and the [Vercel Labs team](https://github.com/vercel-labs) for creating and sharing these invaluable resources with the community.
 
 📚 **[Explore the skills system →](.claude/skills/README.md)**
 
@@ -1013,4 +1075,4 @@ These skills transform our agents from knowledge repositories into systematic, q
 
 ---
 
-**Built by developers, for developers** • **MIT Licensed** • **20 Focused Development Agents** • **14 Composable Skills**
+**Built by developers, for developers** • **MIT Licensed** • **20 Focused Development Agents** • **17 Composable Skills**
