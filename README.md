@@ -18,7 +18,7 @@
 
 ---
 
-## ⚡ Quick Start (60 seconds)
+## Quick Start (60 seconds)
 
 **What is this?** A collection of specialized "expert personas" that make Claude better at specific development tasks.
 
@@ -33,7 +33,7 @@
 
 **Try it now:**
 
-### 🔌 Option A: Plugin Marketplace (Best - Official Integration)
+### Option A: Plugin Marketplace (Best - Official Integration)
 ```bash
 # Add the marketplace to Claude Code
 /plugin marketplace add https://github.com/dazeb/ClaudePlaybook
@@ -49,7 +49,7 @@
 /plugin > Discover
 ```
 
-### 🏪 Option B: CLI Installer (Quick & Easy)
+### Option B: CLI Installer (Quick & Easy)
 ```bash
 curl -fsSL https://raw.githubusercontent.com/dazeb/ClaudePlaybook/main/install.sh | bash
 ```
@@ -69,12 +69,13 @@ git clone https://github.com/dazeb/ClaudePlaybook.git .claude
 That's it! Claude will now respond with frontend-specific best practices, modern tools, and avoid common pitfalls.
 
 ### Latest Updates
-- **🎉 NEW**: **100% Complete Agentic System** - All 20 agents now have comprehensive Anthropic-style workflows (6-9 numbered steps with decision points, loops, verification gates)
-- **✅ NEW**: Complete workflow coverage across all categories:
-  - ✅ Engineering (6/6) - Backend, frontend, mobile, AI/LLM, DevOps, project init
-  - ✅ Web Development (8/8) - React/Next.js, APIs, full-stack, performance, PWA, CSS, static sites, browser automation
-  - ✅ Testing & Quality (5/5) - API testing, performance benchmarking, test analysis, tool evaluation, workflow optimization
-  - ✅ Operations (1/1) - Infrastructure maintenance
+- **NEW**: Vercel Skills Integration - Added 3 frontend/performance skills from vercel-labs/agent-skills (react-best-practices, web-design-guidelines, vercel-deploy)
+- **NEW**: 100% Complete Agentic System - All 20 agents now have comprehensive Anthropic-style workflows (6-9 numbered steps with decision points, loops, verification gates)
+- **NEW**: Complete workflow coverage across all categories:
+  - Engineering (6/6) - Backend, frontend, mobile, AI/LLM, DevOps, project init
+  - Web Development (8/8) - React/Next.js, APIs, full-stack, performance, PWA, CSS, static sites, browser automation
+  - Testing & Quality (5/5) - API testing, performance benchmarking, test analysis, tool evaluation, workflow optimization
+  - Operations (1/1) - Infrastructure maintenance
 - **NEW**: Latest technology versions across all agents (React 19, Next.js 15, Tailwind 4, React Native 0.76+, Flutter 3.27+, Llama 3.3)
 - **NEW**: Skills integration throughout workflows (TDD, systematic debugging, brainstorming, verification)
 - **NEW**: Delegation triggers for parallel agent execution across all agents
@@ -82,13 +83,13 @@ That's it! Claude will now respond with frontend-specific best practices, modern
 
 ---
 
-## 🎯 Skills & Hooks
+## Skills & Hooks
 
-### 🛠️ 17 Composable Skills
+### 17 Composable Skills
 
 Specialized workflows that make agents systematic and quality-focused. Skills are automatically available to all agents.
 
-#### 🚀 Development Skills
+#### Development Skills
 - **test-driven-development** - RED-GREEN-REFACTOR cycle for bulletproof code
 - **systematic-debugging** - Four-phase root cause analysis (gather, analyze, fix, verify)
 - **verification-before-completion** - Never claim done without running verification
@@ -96,28 +97,28 @@ Specialized workflows that make agents systematic and quality-focused. Skills ar
 - **writing-plans** - Break complex tasks into actionable steps
 - **executing-plans** - Execute multi-step plans with review checkpoints
 
-#### 🎨 Frontend & Performance (NEW!)
+#### Frontend & Performance (NEW!)
 - **react-best-practices** - 45 performance rules from Vercel Engineering
 - **web-design-guidelines** - 100+ accessibility and UX compliance rules
 - **vercel-deploy** - Instant deployment with auto-framework detection
 
-#### 🤝 Collaboration Skills
+#### Collaboration Skills
 - **requesting-code-review** - Systematic review requests with context
 - **receiving-code-review** - Handle feedback with technical rigor
 - **dispatching-parallel-agents** - Coordinate multiple agents on independent tasks
 - **subagent-driven-development** - Execute implementation plans in current session
 
-#### 🔄 Workflow Skills
+#### Workflow Skills
 - **using-git-worktrees** - Isolated git worktrees for feature work
 - **finishing-a-development-branch** - Structured options for merge/PR/cleanup
 
-#### 🎓 Meta Skills
+#### Meta Skills
 - **using-superpowers** - Introduction to the skills system
 - **writing-skills** - Create new skills with proper structure
 
-📚 **[View Complete Skills Documentation →](.claude/skills/README.md)**
+**[View Complete Skills Documentation](.claude/skills/README.md)**
 
-### 🪝 4 Hook Templates
+### 4 Hook Templates
 
 Automate workflows that run in response to events (editing files, git operations, session end):
 
@@ -126,12 +127,12 @@ Automate workflows that run in response to events (editing files, git operations
 - **stop-session-summary.sh** - Generate session reports with statistics
 - **post-tests-update.sh** - Auto-update tests.json after test runs
 
-📚 **[View Hooks Documentation →](.claude/hooks/README.md)**
+**[View Hooks Documentation](.claude/hooks/README.md)**
 
 ---
 
 <details>
-<summary>🤖 <strong>AI Setup</strong></summary>
+<summary><strong>AI Setup</strong></summary>
 
 > **Copy this WHOLE section and paste it into your AI agent's context and your AI will do the rest.**
 
@@ -267,7 +268,7 @@ Read and apply these skills to ensure high-quality, systematic development.
 </details>
 
 <details>
-<summary>⚡️ <strong>Start Every Project Right</strong></summary>
+<summary><strong>Start Every Project Right</strong></summary>
 
 **We recommend starting with the [Project Initializer](.claude/agents/engineering/project-initializer.md) agent for new projects.**
 
@@ -293,35 +294,35 @@ The Project Initializer will create your entire project structure, roadmap, and 
 </details>
 
 <details>
-<summary>🎯 <strong>What You Get</strong></summary>
+<summary><strong>What You Get</strong></summary>
 
-**20 focused development agents** - **ALL with comprehensive Anthropic-style workflows** ✅
+**20 focused development agents - ALL with comprehensive Anthropic-style workflows**
 
-- **💻 Web Development** (8 agents) - React 19, Next.js 15, APIs, CSS/Tailwind 4, PWAs, performance, full-stack, static sites, browser automation
-- **🔧 Engineering** (6 agents) - Backend, frontend, mobile (React Native 0.76+, Flutter 3.27+), AI/LLM (Llama 3.3, Claude 3.5), DevOps, project initialization
-- **🧪 Testing & Quality** (5 agents) - API testing, performance benchmarking, test analysis, tool evaluation, workflow optimization
-- **🏢 Operations** (1 agent) - Infrastructure maintenance and internal tooling
+- **Web Development** (8 agents) - React 19, Next.js 15, APIs, CSS/Tailwind 4, PWAs, performance, full-stack, static sites, browser automation
+- **Engineering** (6 agents) - Backend, frontend, mobile (React Native 0.76+, Flutter 3.27+), AI/LLM (Llama 3.3, Claude 3.5), DevOps, project initialization
+- **Testing & Quality** (5 agents) - API testing, performance benchmarking, test analysis, tool evaluation, workflow optimization
+- **Operations** (1 agent) - Infrastructure maintenance and internal tooling
 
 **Every single agent includes complete workflows with:**
-- **🔢 Numbered workflow steps** (6-9 steps) - Clear, actionable phases from start to finish
-- **➡️ Decision points (→)** - Branching logic adapting to your requirements
-- **🔄 Loop conditions (↻)** - Iterative improvement cycles for quality
-- **✅ Verification gates (✓)** - Quality checkpoints before proceeding
-- **👤 Human-in-the-loop approval** - Critical decision points requiring review
-- **🛠️ Skills integration** - TDD, systematic debugging, verification protocols
-- **🤝 Collaboration triggers** - Smart delegation to spawn parallel agents
-- **⚡ Latest technology versions** - Updated to 2025/2026 standards
+- Numbered workflow steps (6-9 steps) - Clear, actionable phases from start to finish
+- Decision points (→) - Branching logic adapting to your requirements
+- Loop conditions (↻) - Iterative improvement cycles for quality
+- Verification gates (✓) - Quality checkpoints before proceeding
+- Human-in-the-loop approval - Critical decision points requiring review
+- Skills integration - TDD, systematic debugging, verification protocols
+- Collaboration triggers - Smart delegation to spawn parallel agents
+- Latest technology versions - Updated to 2025/2026 standards
 
 **This is a truly agentic system** - Every agent knows exactly how to work systematically, when to delegate, and how to ensure quality at every step.
 
 **PLUS: 17 composable skills** for systematic, quality-focused development:
 
-- **🛠️ Development** - TDD, systematic debugging, verification protocols
-- **🎨 Frontend & Performance** - React/Next.js optimization, web design guidelines, Vercel deployment
-- **📋 Planning** - Brainstorming, plan writing, execution workflows
-- **🤝 Collaboration** - Parallel agents, code review, multi-stage review
-- **🔄 Workflow** - Git worktrees, branch management
-- **🎓 Meta** - Skills creation, usage guides
+- **Development** - TDD, systematic debugging, verification protocols
+- **Frontend & Performance** - React/Next.js optimization, web design guidelines, Vercel deployment
+- **Planning** - Brainstorming, plan writing, execution workflows
+- **Collaboration** - Parallel agents, code review, multi-stage review
+- **Workflow** - Git worktrees, branch management
+- **Meta** - Skills creation, usage guides
 
 Each agent knows:
 - The right tools for the job
@@ -333,7 +334,7 @@ Each agent knows:
 </details>
 
 <details>
-<summary>💡 <strong>Why Use These Agents?</strong></summary>
+<summary><strong>Why Use These Agents?</strong></summary>
 
 **Without agents:**
 ```
@@ -358,20 +359,20 @@ Agents turn general AI into domain experts.
 </details>
 
 <details>
-<summary>🚀 <strong>Claude Code 2.1 Features (NEW!)</strong></summary>
+<summary><strong>Claude Code 2.1 Features (NEW!)</strong></summary>
 
 Leverage the latest Claude Code capabilities:
 
-### 🪝 Hooks - Automated Workflows
+### Hooks - Automated Workflows
 Auto-format code, block dangerous git operations, generate session summaries:
 - **post-edit-format.sh** - Auto-formats 12+ languages after every edit
 - **pre-git-safety.sh** - Blocks force pushes, protected file edits
 - **stop-session-summary.sh** - Session reports with stats
 - **post-tests-update.sh** - Auto-updates tests.json
 
-📚 **[View Hooks Documentation →](.claude/hooks/README.md)**
+**[View Hooks Documentation](.claude/hooks/README.md)**
 
-### 🔌 MCP - External Tool Integration
+### MCP - External Tool Integration
 Connect to 15+ services for live data:
 - **GitHub** - PRs, issues, code review
 - **Perplexity** - Real-time web research
@@ -379,20 +380,20 @@ Connect to 15+ services for live data:
 - **Slack** - Team notifications
 - **And 11 more...**
 
-📚 **[View MCP Integration Guide →](docs/guides/MCP_INTEGRATION.md)**
+**[View MCP Integration Guide](docs/guides/MCP_INTEGRATION.md)**
 
-### ⚡ LSP - 900x Faster Code Navigation
+### LSP - 900x Faster Code Navigation
 IDE-like intelligence for 11 languages. Go-to-definition in **50ms** (vs 45 seconds):
 - TypeScript/JavaScript, Python, Go, Rust, Java, C/C++, C#, PHP, Ruby, Kotlin, HTML/CSS
 
-📚 **[View LSP Setup Guide →](docs/guides/LSP_SETUP.md)**
+**[View LSP Setup Guide](docs/guides/LSP_SETUP.md)**
 
 </details>
 
 <details>
-<summary>📚 <strong>Browse Agents</strong></summary>
+<summary><strong>Browse Agents</strong></summary>
 
-### 💻 Web Development (8 agents)
+### Web Development (8 agents)
 | Agent | Use When |
 |-------|----------|
 | [React/Next.js Specialist](.claude/agents/web-development/react-nextjs-specialist.md) | Building Next.js apps, Server Components, App Router |
@@ -404,7 +405,7 @@ IDE-like intelligence for 11 languages. Go-to-definition in **50ms** (vs 45 seco
 | [Static Site Specialist](.claude/agents/web-development/static-site-specialist.md) | Building fast sites with Astro, 11ty, Hugo |
 | [Browser Automation Specialist](.claude/agents/web-development/browser-automation-specialist.md) | E2E testing, web scraping, visual regression |
 
-### 🏗️ Engineering (6 agents)
+### Engineering (6 agents)
 | Agent | Use When |
 |-------|----------|
 | [**Project Initializer**](.claude/agents/engineering/project-initializer.md) | **Recommended for new projects** - Sets up long-term memory |
@@ -414,7 +415,7 @@ IDE-like intelligence for 11 languages. Go-to-definition in **50ms** (vs 45 seco
 | [DevOps Automator](.claude/agents/engineering/devops-automator.md) | Setting up CI/CD, Docker, deployments |
 | [Mobile App Builder](.claude/agents/engineering/mobile-app-builder.md) | Creating React Native or Flutter apps |
 
-### 🧪 Testing & Quality (5 agents)
+### Testing & Quality (5 agents)
 | Agent | Use When |
 |-------|----------|
 | [API Tester](.claude/agents/testing/api-tester.md) | Testing API contracts and endpoints |
@@ -423,7 +424,7 @@ IDE-like intelligence for 11 languages. Go-to-definition in **50ms** (vs 45 seco
 | [Tool Evaluator](.claude/agents/testing/tool-evaluator.md) | Build vs. buy decisions for tools |
 | [Workflow Optimizer](.claude/agents/testing/workflow-optimizer.md) | Improving developer workflows |
 
-### 🏢 Operations (1 agent)
+### Operations (1 agent)
 | Agent | Use When |
 |-------|----------|
 | [Infrastructure Maintainer](.claude/agents/studio-operations/infrastructure-maintainer.md) | Maintaining internal tools and infrastructure |
@@ -431,7 +432,7 @@ IDE-like intelligence for 11 languages. Go-to-definition in **50ms** (vs 45 seco
 </details>
 
 <details>
-<summary>🚀 <strong>How to Use</strong></summary>
+<summary><strong>How to Use</strong></summary>
 
 ### Option 1: Claude Code CLI (Recommended)
 ```bash
@@ -476,7 +477,7 @@ git clone https://github.com/dazeb/ClaudePlaybook.git && mv ClaudePlaybook/.clau
 </details>
 
 <details>
-<summary>📱 <strong>Optional: Telegram Notifier</strong></summary>
+<summary><strong>Optional: Telegram Notifier</strong></summary>
 
 Get notifications on your phone when Claude completes tasks or needs approval for important actions.
 
@@ -497,18 +498,18 @@ The wizard will walk you through creating a Telegram bot and connecting it.
 **Example use:**
 ```bash
 # Get notified when builds complete
-node telegram-notifier.js send "✅ Build successful!"
+node telegram-notifier.js send "Build successful!"
 
 # Request approval for sensitive operations
 node telegram-notifier.js approve "Deploy to production?"
 ```
 
-📚 **[Full Documentation](.claude/tools/telegram-notifier/TELEGRAM_QUICK_START.md)**
+**[Full Documentation](.claude/tools/telegram-notifier/TELEGRAM_QUICK_START.md)**
 
 </details>
 
 <details>
-<summary>🤝 <strong>Contributing</strong></summary>
+<summary><strong>Contributing</strong></summary>
 
 Want to add agents or improve existing ones? PRs welcome!
 
@@ -520,14 +521,14 @@ Want to add agents or improve existing ones? PRs welcome!
 </details>
 
 <details>
-<summary>📄 <strong>License</strong></summary>
+<summary><strong>License</strong></summary>
 
 MIT License - use freely for personal or commercial projects.
 
 </details>
 
 <details>
-<summary>💬 <strong>FAQ</strong></summary>
+<summary><strong>FAQ</strong></summary>
 
 **Q: Do I need to use the Project Initializer?**
 We recommend starting with [@project-initializer](.claude/agents/engineering/project-initializer.md) for new projects. It creates tracking files that give Claude long-term memory across sessions. Without these files, Claude may lose context after long conversations.
@@ -550,7 +551,7 @@ For specialized tasks, yes! Agents provide domain expertise, know the right tool
 </details>
 
 <details>
-<summary>🚀 <strong>Quick Reference</strong></summary>
+<summary><strong>Quick Reference</strong></summary>
 
 ```
 ┌─────────────────────────────────────────────┐
@@ -569,13 +570,13 @@ For specialized tasks, yes! Agents provide domain expertise, know the right tool
 </details>
 
 <details>
-<summary>📖 <strong>Advanced: Long-Running Agents Methodology</strong></summary>
+<summary><strong>Advanced: Long-Running Agents Methodology</strong></summary>
 
-## 🧠 Philosophy: Why Long-Running Agents?
+## Philosophy: Why Long-Running Agents?
 
 Traditional AI agents fail on complex projects because they try to "one-shot" everything. As conversations grow, they hit critical limitations:
 
-| ❌ Traditional Approach | ✅ Long-Running Agents |
+| Traditional Approach | Long-Running Agents |
 |---|---|
 | Context loss after 50+ messages | Persistent state in `tests.json` |
 | Forgets initial architecture decisions | Design intent in `claude-progress.txt` |
@@ -589,20 +590,20 @@ Instead of keeping everything in chat history (which gets forgotten), we externa
 
 ```
 your-project/
-├── tests.json              # ← The roadmap (50-200+ features)
-├── init.sh                 # ← One-command environment setup
-├── claude-progress.txt     # ← Session memory (decisions & rationale)
-├── src/                    # ← Your actual code
-└── .git/                   # ← Version control for verification
+├── tests.json              # The roadmap (50-200+ features)
+├── init.sh                 # One-command environment setup
+├── claude-progress.txt     # Session memory (decisions & rationale)
+├── src/                    # Your actual code
+└── .git/                   # Version control for verification
 ```
 
-> 💡 **Key Insight**: A feature isn't "done" until the agent runs verification, commits to git, and updates `tests.json`. This forces test-driven, incremental progress.
+> **Key Insight**: A feature isn't "done" until the agent runs verification, commits to git, and updates `tests.json`. This forces test-driven, incremental progress.
 
 ---
 
-## 🔄 How Long-Running Agents Work
+## How Long-Running Agents Work
 
-### 1. 🎬 The Orientation Protocol
+### 1. The Orientation Protocol
 
 Every time a new agent session starts (or context refreshes), the agent follows a strict startup routine:
 
@@ -622,7 +623,7 @@ cat tests.json | head -50       # See roadmap status
 
 ---
 
-### 2. 🧩 Atomic Feature Implementation
+### 2. Atomic Feature Implementation
 
 Complex features are broken into **Atomic Units** in `tests.json`:
 
@@ -652,7 +653,7 @@ Complex features are broken into **Atomic Units** in `tests.json`:
 
 ---
 
-### 3. 📊 State Persistence Strategy
+### 3. State Persistence Strategy
 
 | Artifact | Purpose | Format | Updated By |
 |----------|---------|--------|------------|
@@ -665,7 +666,7 @@ Complex features are broken into **Atomic Units** in `tests.json`:
 
 ---
 
-## 💡 Usage Patterns & Best Practices
+## Usage Patterns & Best Practices
 
 ### Pattern 1: The Perfect Session Start
 
@@ -859,11 +860,11 @@ If agent underperforms:
 
 ---
 
-## ⚡ Claude 4.5 Optimizations
+## Claude 4.5 Optimizations
 
 These agents leverage Claude 4.5's unique capabilities:
 
-### 🔀 Parallel Tool Use
+### Parallel Tool Use
 Agents read multiple files and run searches simultaneously:
 ```markdown
 ✅ Do this:
@@ -875,21 +876,21 @@ Agents read multiple files and run searches simultaneously:
 - Read file 1 → wait → read file 2 → wait → read file 3
 ```
 
-### 🎨 Anti-AI-Slop Guidelines
+### Anti-AI-Slop Guidelines
 Frontend agents enforce distinctive design:
 - ✅ Unique typography combinations (not default system fonts)
 - ✅ Cohesive color palettes (not generic blue/gray)
 - ✅ Staggered micro-interactions (not uniform animations)
 - ❌ Generic "Bootstrap-looking" designs
 
-### 🧠 Extended Thinking
+### Extended Thinking
 Complex decisions use Claude's extended thinking mode:
 - Architecture design (Backend Architect)
 - Root cause analysis (Test Results Analyzer)
 - Build vs. buy decisions (Tool Evaluator)
 - Multi-source data synthesis (Analytics Reporter)
 
-### 🔍 Anti-Hallucination Guardrails
+### Anti-Hallucination Guardrails
 Strict verification protocols:
 - ✅ Must read file before discussing contents
 - ✅ Must verify changes with git diff
@@ -898,7 +899,7 @@ Strict verification protocols:
 
 ---
 
-## 📚 Learning Resources
+## Learning Resources
 
 ### Understanding Long-Running Agents
 
@@ -919,7 +920,7 @@ Strict verification protocols:
 
 ---
 
-## 📊 Repository Statistics
+## Repository Statistics
 
 | Metric | Value |
 |--------|-------|
@@ -939,7 +940,7 @@ Strict verification protocols:
 
 ---
 
-## 🎓 What Each Agent Includes
+## What Each Agent Includes
 
 Every agent definition follows this comprehensive structure with **Anthropic-style workflows**:
 
@@ -1007,7 +1008,7 @@ Common mistakes to avoid
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Here's how to help:
 
@@ -1036,14 +1037,14 @@ We welcome contributions! Here's how to help:
 </details>
 
 <details>
-<summary>🙏 <strong>Acknowledgments</strong></summary>
+<summary><strong>Acknowledgments</strong></summary>
 
 This project builds upon exceptional work from the AI agent development community:
 
-### 🎯 Core Methodology
+### Core Methodology
 Built on [Anthropic's research on effective agents](https://www.anthropic.com/research/building-effective-agents) and inspired by modern DevOps practices.
 
-### 🛠️ Skills System
+### Skills System
 The comprehensive skills system (`.claude/skills/`) combines two exceptional sources:
 
 **[obra/superpowers](https://github.com/obra/superpowers)** - Battle-tested systematic development methodologies:
