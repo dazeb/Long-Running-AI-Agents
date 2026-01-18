@@ -2,7 +2,9 @@
 
 This directory contains **composable skills** that enhance all agents in this repository. Skills are systematic workflows and methodologies that guide agents through complex processes from brainstorming to completion.
 
-> **Source**: Skills adapted from [obra/superpowers](https://github.com/obra/superpowers) - A comprehensive skills library for Claude Code agents.
+> **Sources**:
+> - Core skills adapted from [obra/superpowers](https://github.com/obra/superpowers) - A comprehensive skills library for Claude Code agents
+> - Vercel skills from [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) - Performance and deployment skills from Vercel Engineering
 
 ## What Are Skills?
 
@@ -158,6 +160,46 @@ Systematic branch completion:
 3. Clean up temporary artifacts
 4. Update documentation
 5. Close related issues
+
+### 🎨 Frontend & Performance Skills
+
+#### react-best-practices
+**When to use**: Writing, reviewing, or refactoring React/Next.js code
+
+Performance optimization guidelines from Vercel Engineering:
+- 45 rules across 8 priority-based categories
+- Eliminates waterfalls and optimizes bundle size
+- Server-side and client-side performance patterns
+- Re-render optimization and rendering performance
+
+**Core principle**: Prioritize CRITICAL optimizations (waterfalls, bundle size) before LOW priority ones.
+
+**Key files**:
+- `react-best-practices/SKILL.md` - Quick reference guide
+- `react-best-practices/AGENTS.md` - Complete expanded guide
+- `react-best-practices/rules/` - Individual rule files with examples
+
+#### web-design-guidelines
+**When to use**: Reviewing UI code for accessibility and best practices
+
+Comprehensive UI compliance checker:
+- Fetches latest Web Interface Guidelines from Vercel
+- Reviews files against 100+ rules
+- Covers accessibility, performance, UX, and more
+- Reports findings in concise `file:line` format
+
+**Usage**: Provide file paths or patterns to review against current guidelines.
+
+#### vercel-deploy
+**When to use**: Deploying applications to Vercel
+
+Instant deployment to Vercel without authentication:
+- Auto-detects 40+ frameworks from package.json
+- Returns preview URL and claimable deployment link
+- Supports static HTML, React, Next.js, Vue, Svelte, and more
+- No Vercel account required upfront
+
+**Usage**: Run deployment script with project path or use in current directory.
 
 ### 🎓 Meta Skills
 
@@ -326,7 +368,8 @@ To add a new skill to this system:
 
 ## Resources
 
-- **Original Skills Repository**: https://github.com/obra/superpowers
+- **Core Skills Repository**: https://github.com/obra/superpowers
+- **Vercel Skills Repository**: https://github.com/vercel-labs/agent-skills
 - **Skills Directory**: `.claude/skills/`
 - **Plugin Configuration**: `.claude-plugin/plugin.json`
 - **Agent Definitions**: `.claude/agents/{category}/{agent-name}.md`
