@@ -260,7 +260,7 @@ Spawn in parallel:
 
 ### Available Agents
 
-**Web Development**: react-nextjs-specialist, api-integration-specialist, fullstack-web-developer, web-performance-optimizer, pwa-builder, css-tailwind-expert, static-site-specialist
+**Web Development**: react-nextjs-specialist, api-integration-specialist, fullstack-web-developer, web-performance-optimizer, pwa-builder, css-tailwind-expert, tailwind-v4-specialist, static-site-specialist
 
 **Engineering**: project-initializer, ai-engineer, backend-architect, devops-automator, frontend-developer, mobile-app-builder, rapid-prototyper
 

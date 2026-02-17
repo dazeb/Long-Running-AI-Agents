@@ -1,5 +1,60 @@
 # Changelog
 
+## Version 2.4 - Tailwind CSS v4 Specialist Agent (February 2026)
+
+### New Agent
+
+#### 🌊 Tailwind CSS v4 Specialist
+New dedicated agent for Tailwind CSS v4's CSS-first paradigm:
+
+**File Added:**
+- `agent/web-development/tailwind-v4-specialist.md` (~550 lines)
+
+**Capabilities:**
+- CSS-first configuration with `@theme`, `@utility`, `@custom-variant`, `@source`, `@plugin` directives
+- Design token architecture using native CSS custom properties via `@theme`
+- v3 to v4 migration guidance using `@tailwindcss/upgrade` automated tool
+- Multi-theme systems (dark mode, brand themes) with `@custom-variant`
+- Built-in container query support (`@container`, `@sm`, `@md`, `@lg`)
+- 3D transform utilities (`rotate-x-*`, `rotate-y-*`, `scale-z-*`, `perspective-*`)
+- Performance optimization leveraging the Oxide engine (5x faster full, 100x faster incremental builds)
+- Build tool integration (`@tailwindcss/vite`, `@tailwindcss/postcss`, `@tailwindcss/cli`)
+- Component variant patterns with CVA, tailwind-variants, and `cn()` utility
+- Framework integration guides (Next.js, Vite, Astro, SvelteKit)
+- oklch color system best practices for perceptually uniform palettes
+- Accessibility: focus-visible states, contrast ratios, reduced motion, high contrast mode
+
+**Workflow Steps:**
+1. Project Analysis & Tailwind v4 Setup (framework-specific installation)
+2. Design Token Architecture with `@theme` (semantic color naming, typography, spacing)
+3. Custom Variants & Theming (`@custom-variant` for dark mode and multi-theme)
+4. Custom Utilities with `@utility` (static and functional utilities)
+5. Component Styling Implementation (CVA, container queries, interactive states)
+6. Content Detection & Source Configuration (`@source` directives)
+7. Performance Optimization & Bundle Analysis (< 30KB gzipped target)
+8. Accessibility & Cross-Browser Testing (WCAG AA, Chrome 111+, Firefox 128+, Safari 16.4+)
+9. Migration Support (v3 to v4 automated + manual conversion)
+
+### Statistics
+
+**Total Agent Count:** 20 → 21 agents
+- Web Development: 8 → 9 agents (added Tailwind v4 Specialist)
+
+**Documentation Updated:**
+- README.md - Updated agent counts (20 → 21), added agent to Browse Agents table and AI Setup section
+- docs/FEATURES.md - Added Tailwind v4 Specialist to Web Development category
+- docs/CHANGELOG.md - This entry
+
+### Key Benefits
+
+- **Dedicated v4 Expertise**: Deep focus on Tailwind v4's architectural shift to CSS-first configuration
+- **Migration Path**: Step-by-step guidance for migrating from v3 JavaScript config to v4 CSS-first
+- **Design Token System**: Comprehensive `@theme` patterns with semantic naming and oklch colors
+- **Modern CSS**: Leverages cascade layers, container queries, `color-mix()`, and registered custom properties
+- **Performance**: Targets < 30KB gzipped CSS, < 500ms full builds with the Oxide engine
+
+---
+
 ## Version 2.3 - Claude Code 2.1 Integration & Automation (January 2026)
 
 ### 🚀 Major Features

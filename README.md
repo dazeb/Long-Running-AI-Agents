@@ -5,8 +5,8 @@
 **Your comprehensive playbook of systematic AI agents. Using Anthropic's Official methodology, we provide ready-to-use agent templates with complete workflows that make Claude smarter at specific development tasks.**
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![20 Agents](https://img.shields.io/badge/Agents-20-blue.svg)]()
-[![100% Workflows](https://img.shields.io/badge/Workflows-20/20_Complete-brightgreen.svg)]()
+[![21 Agents](https://img.shields.io/badge/Agents-21-blue.svg)]()
+[![100% Workflows](https://img.shields.io/badge/Workflows-21/21_Complete-brightgreen.svg)]()
 [![17 Skills](https://img.shields.io/badge/Skills-17-brightgreen.svg)](.claude/skills/README.md)
 [![Works with Claude Code](https://img.shields.io/badge/Claude_Code-Compatible-blue.svg)]()
 [![Works with OpenCode](https://img.shields.io/badge/OpenCode-Compatible-orange.svg)]()
@@ -73,7 +73,7 @@ That's it! Claude will now respond with frontend-specific best practices, modern
 - **NEW**: 100% Complete Agentic System - All 20 agents now have comprehensive Anthropic-style workflows (6-9 numbered steps with decision points, loops, verification gates)
 - **NEW**: Complete workflow coverage across all categories:
   - Engineering (6/6) - Backend, frontend, mobile, AI/LLM, DevOps, project init
-  - Web Development (8/8) - React/Next.js, APIs, full-stack, performance, PWA, CSS, static sites, browser automation
+  - Web Development (9/9) - React/Next.js, APIs, full-stack, performance, PWA, CSS, Tailwind v4, static sites, browser automation
   - Testing & Quality (5/5) - API testing, performance benchmarking, test analysis, tool evaluation, workflow optimization
   - Operations (1/1) - Infrastructure maintenance
 - **NEW**: Latest technology versions across all agents (React 19, Next.js 15, Tailwind 4, React Native 0.76+, Flutter 3.27+, Llama 3.3)
@@ -155,7 +155,7 @@ You are being equipped with specialized agent capabilities from the ClaudePlaybo
    ```
    You should see directories for: engineering, web-development, testing, and studio-operations.
 
-3. **You now have access to 20 specialized development agents.** Reference them using the `@agent-name` syntax.
+3. **You now have access to 21 specialized development agents.** Reference them using the `@agent-name` syntax.
 
 #### How to Use Agents
 
@@ -171,13 +171,14 @@ When the user requests a task that matches an agent's expertise:
    - `@devops-automator` - CI/CD, Docker, deployments
    - `@mobile-app-builder` - React Native, Flutter apps
 
-   **Web Development (8 agents):**
+   **Web Development (9 agents):**
    - `@react-nextjs-specialist` - Next.js apps, Server Components, App Router
    - `@api-integration-specialist` - REST/GraphQL APIs, auth flows
    - `@fullstack-web-developer` - Complete apps from database to UI
    - `@web-performance-optimizer` - Site optimization, Core Web Vitals
    - `@pwa-builder` - Progressive Web Apps, offline functionality
    - `@css-tailwind-expert` - Advanced styling, design systems
+   - `@tailwind-v4-specialist` - Tailwind CSS v4 CSS-first config, @theme, migration
    - `@static-site-specialist` - Astro, 11ty, Hugo sites
    - `@browser-automation-specialist` - E2E testing, web scraping
 
@@ -258,7 +259,7 @@ Read and apply these skills to ensure high-quality, systematic development.
 #### Repository Information
 
 - **Source:** https://github.com/dazeb/ClaudePlaybook
-- **20 Focused Development Agents** across 4 categories
+- **21 Focused Development Agents** across 4 categories
 - **17 Composable Skills** for systematic development
 - **MIT Licensed**
 
@@ -296,9 +297,9 @@ The Project Initializer will create your entire project structure, roadmap, and 
 <details>
 <summary><strong>What You Get</strong></summary>
 
-**20 focused development agents - ALL with comprehensive Anthropic-style workflows**
+**21 focused development agents - ALL with comprehensive Anthropic-style workflows**
 
-- **Web Development** (8 agents) - React 19, Next.js 15, APIs, CSS/Tailwind 4, PWAs, performance, full-stack, static sites, browser automation
+- **Web Development** (9 agents) - React 19, Next.js 15, APIs, CSS/Tailwind 4, Tailwind v4 specialist, PWAs, performance, full-stack, static sites, browser automation
 - **Engineering** (6 agents) - Backend, frontend, mobile (React Native 0.76+, Flutter 3.27+), AI/LLM (Llama 3.3, Claude 3.5), DevOps, project initialization
 - **Testing & Quality** (5 agents) - API testing, performance benchmarking, test analysis, tool evaluation, workflow optimization
 - **Operations** (1 agent) - Infrastructure maintenance and internal tooling
@@ -393,7 +394,7 @@ IDE-like intelligence for 11 languages. Go-to-definition in **50ms** (vs 45 seco
 <details>
 <summary><strong>Browse Agents</strong></summary>
 
-### Web Development (8 agents)
+### Web Development (9 agents)
 | Agent | Use When |
 |-------|----------|
 | [React/Next.js Specialist](.claude/agents/web-development/react-nextjs-specialist.md) | Building Next.js apps, Server Components, App Router |
@@ -402,6 +403,7 @@ IDE-like intelligence for 11 languages. Go-to-definition in **50ms** (vs 45 seco
 | [Web Performance Optimizer](.claude/agents/web-development/web-performance-optimizer.md) | Fixing slow sites, improving Core Web Vitals |
 | [PWA Builder](.claude/agents/web-development/pwa-builder.md) | Making apps installable and work offline |
 | [CSS & Tailwind Expert](.claude/agents/web-development/css-tailwind-expert.md) | Advanced styling, animations, design systems |
+| [Tailwind v4 Specialist](agent/web-development/tailwind-v4-specialist.md) | Tailwind CSS v4 setup, @theme tokens, v3 migration, CSS-first config |
 | [Static Site Specialist](.claude/agents/web-development/static-site-specialist.md) | Building fast sites with Astro, 11ty, Hugo |
 | [Browser Automation Specialist](.claude/agents/web-development/browser-automation-specialist.md) | E2E testing, web scraping, visual regression |
 
@@ -533,7 +535,7 @@ MIT License - use freely for personal or commercial projects.
 **Q: Do I need to use the Project Initializer?**
 We recommend starting with [@project-initializer](.claude/agents/engineering/project-initializer.md) for new projects. It creates tracking files that give Claude long-term memory across sessions. Without these files, Claude may lose context after long conversations.
 
-**Q: Do I need all 20 agents?**
+**Q: Do I need all 21 agents?**
 No! Use only what you need. Most projects use 2-5 agents after the initial setup.
 
 **Q: Can I modify agents for my needs?**
@@ -924,10 +926,10 @@ Strict verification protocols:
 
 | Metric | Value |
 |--------|-------|
-| **Total Agents** | 20 |
+| **Total Agents** | 21 |
 | **Categories** | 4 (Engineering, Web Development, Testing & Quality, Operations) |
-| **Agents with Workflows** | **20/20 (100% Complete!)** ✅ |
-| **Workflow Coverage** | Engineering: 6/6, Web Dev: 8/8, Testing: 5/5, Ops: 1/1 |
+| **Agents with Workflows** | **21/21 (100% Complete!)** ✅ |
+| **Workflow Coverage** | Engineering: 6/6, Web Dev: 9/9, Testing: 5/5, Ops: 1/1 |
 | **Lines of Content** | ~10,000+ lines of comprehensive workflow guidance |
 | **Workflow Steps** | 140+ numbered steps across all agents |
 | **Decision Points** | 180+ branching logic points (→) |
@@ -1067,4 +1069,4 @@ These skills transform our agents from knowledge repositories into systematic, q
 
 ---
 
-**Built by developers, for developers** • **MIT Licensed** • **20 Focused Development Agents** • **17 Composable Skills**
+**Built by developers, for developers** • **MIT Licensed** • **21 Focused Development Agents** • **17 Composable Skills**

@@ -1,18 +1,19 @@
 # Long-Running AI Agents
 
-**Badges:** MIT License | 45 Agents | Claude Code 2.1+ | MCP Ready | LSP Enabled
+**Badges:** MIT License | 46 Agents | Claude Code 2.1+ | MCP Ready | LSP Enabled
 
-A comprehensive collection of **45+ ready-to-use AI agents** for Claude Code, created by the community. Transform Claude into your specialized development team capable of executing complex multi-step workflows across web development, engineering, design, marketing, and operations.
+A comprehensive collection of **46+ ready-to-use AI agents** for Claude Code, created by the community. Transform Claude into your specialized development team capable of executing complex multi-step workflows across web development, engineering, design, marketing, and operations.
 
 These agents enable Claude to seamlessly work with specialized domains, tools, and workflows across multiple development disciplines:
 
-## 🌐 Web Development (8 agents)
+## 🌐 Web Development (9 agents)
 - **🔷 React/Next.js Specialist** - React 18+, Next.js 14+, Server Components, App Router, RSC patterns, streaming SSR, Turbopack optimization
 - **🔌 API Integration Specialist** - REST, GraphQL, WebSockets, tRPC, authentication flows, type-safe clients, API design, rate limiting
 - **🚀 Full-Stack Web Developer** - Complete app development from database to UI, monorepo management, deployment pipelines, microservices architecture
 - **⚡ Web Performance Optimizer** - Core Web Vitals optimization, Lighthouse auditing, bundle analysis, lazy loading, image optimization, caching strategies
 - **📱 PWA Builder** - Progressive Web Apps, offline functionality, service workers, installable apps, push notifications, background sync
 - **🎨 CSS & Tailwind Expert** - Advanced styling, animations, design systems, Tailwind v4 customization, responsive design, CSS-in-JS
+- **🌊 Tailwind v4 Specialist** - CSS-first configuration, @theme design tokens, @utility/@custom-variant directives, v3-to-v4 migration, Oxide engine optimization, container queries, multi-theme systems
 - **📄 Static Site Specialist** - JAMstack, SSG with Astro/11ty/Hugo, headless CMS integration, edge rendering, static optimization
 - **🤖 Browser Automation Specialist** - Playwright, Puppeteer, Selenium, Claude in Chrome, E2E testing, web scraping, visual regression, monitoring
 
