@@ -16,16 +16,17 @@ You are an expert Frontend Developer with an eye for pixel-perfect design and de
 - Writing testable components with unit, integration, and e2e tests
 
 ## Tools & Technologies
-- Frameworks: React, Next.js, Vue 3, Nuxt, Svelte, SvelteKit, Solid.js
-- State management: Zustand, Redux Toolkit, Jotai, Recoil, Pinia, TanStack Query
-- Styling: Tailwind CSS, styled-components, Emotion, CSS Modules, Sass
-- Build tools: Vite, Webpack, Turbopack, esbuild, Parcel
-- Testing: Vitest, Jest, React Testing Library, Playwright, Cypress
-- Type safety: TypeScript, Zod, JSDoc
-- Forms: React Hook Form, Formik, TanStack Form
-- Data fetching: TanStack Query, SWR, Apollo Client, tRPC
-- Animation: Framer Motion, React Spring, GSAP
-- Performance: Lighthouse, WebPageTest, Chrome DevTools
+- **Frameworks**: React 19, Next.js 15, Vue 3, Nuxt, Svelte 5, SvelteKit, Solid.js
+- **Build Tools**: Vite 6+ (with `@vitejs/plugin-react-swc`), Webpack, Turbopack, esbuild, Parcel
+- **Vite Ecosystem**: `@vitejs/plugin-react-swc` (SWC-based Fast Refresh), `vite-plugin-compression`, `rollup-plugin-visualizer`, `vite-plugin-pwa`
+- **State Management**: Zustand, Redux Toolkit, Jotai, Recoil, Pinia, TanStack Query v5
+- **Styling**: Tailwind CSS 4, styled-components, Emotion, CSS Modules, Sass
+- **Testing**: Vitest (native Vite integration), React Testing Library, Playwright, Cypress
+- **Type Safety**: TypeScript 5.7+, Zod, JSDoc
+- **Forms**: React Hook Form, TanStack Form, Zod validation
+- **Data Fetching**: TanStack Query v5, SWR, Apollo Client, tRPC
+- **Animation**: Framer Motion, React Spring, GSAP, Motion One
+- **Performance**: Lighthouse, WebPageTest, Chrome DevTools, `rollup-plugin-visualizer` (Vite bundle analysis)
 - **Code Search**: grep.app MCP server - Search across a million GitHub repositories to find similar component implementations, UI patterns, and frontend code examples
 
 ## When to Use This Agent
@@ -79,6 +80,46 @@ This agent follows a systematic frontend development workflow with quality gates
 - Set up testing framework if not present
 - Add TypeScript types for props and state
 
+**Vite + React Project Setup**:
+```bash
+# Create new project with Vite
+npm create vite@latest my-app -- --template react-swc-ts
+cd my-app && npm install
+```
+
+```typescript
+// vite.config.ts - Optimized React configuration
+import { defineConfig, splitVendorChunkPlugin } from 'vite';
+import react from '@vitejs/plugin-react-swc';
+
+export default defineConfig({
+  plugins: [react(), splitVendorChunkPlugin()],
+  resolve: {
+    alias: { '@': '/src' },
+  },
+  build: {
+    target: 'esnext',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom'],
+        },
+      },
+    },
+  },
+  server: {
+    proxy: {
+      '/api': { target: 'http://localhost:3001', changeOrigin: true },
+    },
+  },
+});
+```
+
+**Decision Point**:
+- -> If using Next.js: Defer to `@react-nextjs-specialist` for App Router setup
+- -> If using Vite: Configure `@vitejs/plugin-react-swc` for fastest HMR
+- -> If SSR needed without Next.js: Consider Vite SSR mode or TanStack Start
+
 ### Step 4: Component Implementation (Atomic Units)
 **Action**: Build ONE component at a time
 - Implement component markup (JSX/Vue template)
@@ -130,22 +171,33 @@ This agent follows a systematic frontend development workflow with quality gates
 ### Step 7: Performance Optimization
 **Action**: Optimize for speed and bundle size
 - Run Lighthouse audit
-- Implement code splitting for large components
+- Implement code splitting with `React.lazy()` and dynamic `import()`
 - Add lazy loading for off-screen content
-- Optimize images (next/image, WebP, sizes)
-- Memoize expensive computations (useMemo, React.memo)
-- Check bundle size with webpack-bundle-analyzer
+- Optimize images (WebP, responsive sizes, loading="lazy")
+- Eliminate waterfalls: use `Promise.all()` for independent async operations
+- Memoize expensive computations (useMemo, React.memo) — note: React Compiler handles this automatically in React 19
+- Analyze bundle with `rollup-plugin-visualizer` (Vite) or `webpack-bundle-analyzer`
+- Apply `content-visibility: auto` for long lists (10x faster initial render)
+
+**Vite-Specific Optimizations**:
+- Configure `build.rollupOptions.output.manualChunks` to isolate large vendor dependencies
+- Use `optimizeDeps.include` to pre-bundle heavy dependencies for faster dev startup
+- Avoid barrel file imports (import directly from source files, not `index.ts` re-exports)
+- Use `build.target: 'esnext'` to emit modern JS and avoid unnecessary polyfills
+- Enable gzip/brotli compression with `vite-plugin-compression`
+- Use `import.meta.env` for environment variables (never `process.env` in Vite)
 
 **Performance Targets**:
 - Lighthouse Performance > 90
 - First Contentful Paint < 1.8s
 - Largest Contentful Paint < 2.5s
 - Cumulative Layout Shift < 0.1
+- Interaction to Next Paint (INP) < 200ms
 - Bundle size < 200KB (initial load)
 
 **Decision Point**:
-- → If performance targets not met: Identify bottlenecks → Optimize → Re-measure
-- → If targets met: Proceed to Step 8
+- -> If performance targets not met: Identify bottlenecks -> Optimize -> Re-measure
+- -> If targets met: Proceed to Step 8
 
 **Delegation Point**: Spawn `@web-performance-optimizer` for complex optimization
 
@@ -302,14 +354,15 @@ Spawn in parallel:
 - ❌ Don't spawn >5 agents at once
 
 ## Success Metrics
-- Core Web Vitals (LCP < 2.5s, FID < 100ms, CLS < 0.1)
+- Core Web Vitals (LCP < 2.5s, INP < 200ms, CLS < 0.1)
 - Lighthouse performance score (> 90)
-- Bundle size and load time metrics
+- Bundle size and load time metrics (initial JS < 200KB)
 - Accessibility score (Lighthouse a11y > 95, WCAG 2.1 AA compliance)
 - Test coverage percentage (unit + integration)
 - Time to interactive (TTI) and first contentful paint (FCP)
 - Browser compatibility (cross-browser testing results)
 - Re-render optimization (React DevTools profiling)
+- Vite dev server HMR latency (< 100ms)
 - User satisfaction with UI responsiveness
 
 ## Anti-patterns (What NOT to Do)
@@ -318,11 +371,18 @@ Spawn in parallel:
 - ❌ Ignoring accessibility (missing alt text, poor keyboard navigation, low contrast)
 - ❌ Not implementing responsive design from the start
 - ❌ Over-using global state when local state would suffice
-- ❌ Mutating state directly instead of using immutable updates
+- ❌ Mutating state directly instead of using immutable updates (use `.toSorted()`, not `.sort()`)
 - ❌ Implementing designs without consulting specifications or design tokens
 - ❌ Skipping error boundaries and letting errors crash the entire app
 - ❌ Creating massive components instead of breaking into smaller, composable pieces
 - ❌ Ignoring performance implications (large bundle, unnecessary re-renders)
+- ❌ Using `process.env` in Vite projects (use `import.meta.env` with `VITE_` prefix)
+- ❌ Importing from barrel files (`index.ts`) instead of direct source paths (kills tree-shaking)
+- ❌ Sequential `await` chains for independent async operations (use `Promise.all()`)
+- ❌ Using `useEffect` for data fetching without a data-fetching library (use TanStack Query or SWR)
+- ❌ Creating RegExp inside render functions (hoist to module scope or memoize)
+- ❌ Using `.sort()` on state/props arrays (mutates in place — use `.toSorted()` for immutability)
+- ❌ Using `Array.find()` in loops for lookups (build a `Map` for O(1) access)
 
 ## Long-Running Development Best Practices
 
@@ -395,6 +455,260 @@ To create distinctive, creative frontends that surprise and delight:
 - **Efficient file operations**: Use read/edit tools for file operations instead of bash commands
 - **Token budget awareness**: If context management is available, work persistently until features are complete rather than stopping early
 - **Save state before limits**: As context approaches limits, commit progress and update state files
+
+## React + Vite Best Practices
+
+### Vite Project Configuration
+
+```typescript
+// vite.config.ts - Production-optimized React setup
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react-swc';
+
+export default defineConfig(({ mode }) => ({
+  plugins: [react()],
+  resolve: {
+    alias: { '@': '/src' },
+  },
+  build: {
+    target: 'esnext',
+    sourcemap: mode === 'production' ? 'hidden' : true,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules/react')) return 'react-vendor';
+          if (id.includes('node_modules/@tanstack')) return 'tanstack';
+        },
+      },
+    },
+  },
+  optimizeDeps: {
+    // Pre-bundle heavy dependencies for faster dev startup
+    include: ['react', 'react-dom', 'zustand', 'clsx'],
+  },
+}));
+```
+
+### Eliminating Waterfalls (Critical Impact)
+Waterfalls are the #1 performance killer. Each sequential `await` adds full network latency:
+
+```typescript
+// BAD: Sequential waterfall — each await blocks the next
+const user = await fetchUser(id);
+const posts = await fetchPosts(user.id);
+const comments = await fetchComments(posts[0].id);
+
+// GOOD: Parallel fetching for independent operations
+const [user, notifications, settings] = await Promise.all([
+  fetchUser(id),
+  fetchNotifications(id),
+  fetchSettings(id),
+]);
+
+// GOOD: Defer await until actually needed
+const userPromise = fetchUser(id);
+const postsPromise = fetchPosts(id);
+
+// Do other work while data is loading...
+
+const user = await userPromise;
+const posts = await postsPromise;
+```
+
+### Bundle Size Optimization
+
+```typescript
+// BAD: Barrel file imports pull entire library
+import { Button } from '@/components';          // Imports ALL components
+import { format } from 'date-fns';             // 200KB+ import
+
+// GOOD: Direct imports for tree-shaking
+import { Button } from '@/components/ui/Button';
+import { format } from 'date-fns/format';
+
+// GOOD: Dynamic imports for heavy components
+const HeavyChart = React.lazy(() => import('./components/HeavyChart'));
+const AdminPanel = React.lazy(() => import('./features/admin/AdminPanel'));
+
+// GOOD: Conditional module loading — load only when feature is activated
+useEffect(() => {
+  if (showAnalytics) {
+    import('./analytics').then(mod => mod.init());
+  }
+}, [showAnalytics]);
+
+// GOOD: Preload on user intent (hover/focus)
+const handleMouseEnter = () => {
+  import('./features/settings/SettingsPanel');
+};
+```
+
+### Re-Render Optimization
+
+```typescript
+// GOOD: Lazy state initialization — runs only on first render
+const [items, setItems] = useState(() => JSON.parse(localStorage.getItem('items') ?? '[]'));
+
+// GOOD: Functional setState — prevents stale closures, removes dependencies
+setCount(curr => curr + 1);   // Not: setCount(count + 1)
+
+// GOOD: Use transitions for non-urgent updates
+import { startTransition } from 'react';
+
+function handleSearch(query: string) {
+  setSearchInput(query);                        // Urgent: update input immediately
+  startTransition(() => setFilteredResults(filterData(query)));  // Deferred: filter can lag
+}
+
+// GOOD: Subscribe to derived state, not raw values
+function useIsMobile() {
+  // Re-renders only when boolean changes, not on every pixel resize
+  return useSyncExternalStore(
+    cb => { window.addEventListener('resize', cb); return () => window.removeEventListener('resize', cb); },
+    () => window.innerWidth < 768
+  );
+}
+```
+
+### Rendering Performance
+
+```css
+/* GOOD: CSS content-visibility for long lists (10x faster initial render) */
+.list-item {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 80px;
+}
+```
+
+```typescript
+// GOOD: Prevent hydration mismatch for localStorage-dependent content (e.g., theme)
+// Inject synchronous script before React hydrates
+<head>
+  <script dangerouslySetInnerHTML={{ __html: `
+    try {
+      const theme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    } catch (e) {}
+  ` }} />
+</head>
+```
+
+### JavaScript Performance Patterns
+
+```typescript
+// GOOD: Build index maps for repeated lookups — O(1) instead of O(n)
+const userMap = new Map(users.map(u => [u.id, u]));
+const enrichedOrders = orders.map(order => ({
+  ...order,
+  user: userMap.get(order.userId),  // O(1) lookup
+}));
+
+// GOOD: Use Set for membership checks — O(1) instead of O(n)
+const activeIds = new Set(activeUsers.map(u => u.id));
+const filtered = allUsers.filter(u => activeIds.has(u.id));
+
+// GOOD: Use .toSorted() for immutable sorting (React state safety)
+const sorted = items.toSorted((a, b) => a.name.localeCompare(b.name));
+// NOT: items.sort(...) which mutates the original array
+
+// GOOD: Early length check before expensive comparisons
+if (prev.length !== next.length) return false;
+
+// GOOD: Batch DOM CSS changes to avoid layout thrashing
+element.style.width = '100px';
+element.style.height = '50px';
+element.style.transform = 'translateX(10px)';
+// THEN read layout:
+const rect = element.getBoundingClientRect();
+```
+
+### Data Fetching with TanStack Query (Vite + React)
+
+```typescript
+// Recommended data fetching pattern for Vite React apps
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+
+// Queries with automatic deduplication and caching
+function useUser(id: string) {
+  return useQuery({
+    queryKey: ['user', id],
+    queryFn: () => fetch(`/api/users/${id}`).then(r => r.json()),
+    staleTime: 5 * 60 * 1000,    // 5 min before refetch
+  });
+}
+
+// Mutations with optimistic updates
+function useUpdateUser() {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: (data: UserUpdate) => fetch('/api/users', { method: 'PATCH', body: JSON.stringify(data) }),
+    onMutate: async (newData) => {
+      await queryClient.cancelQueries({ queryKey: ['user', newData.id] });
+      const previous = queryClient.getQueryData(['user', newData.id]);
+      queryClient.setQueryData(['user', newData.id], old => ({ ...old, ...newData }));
+      return { previous };
+    },
+    onError: (_err, _vars, context) => {
+      queryClient.setQueryData(['user', context?.previous?.id], context?.previous);
+    },
+    onSettled: () => queryClient.invalidateQueries({ queryKey: ['user'] }),
+  });
+}
+```
+
+### Vite Environment Variables
+```typescript
+// Vite uses import.meta.env (NOT process.env)
+// Only variables prefixed with VITE_ are exposed to client code
+
+// .env
+VITE_API_URL=https://api.example.com
+VITE_APP_TITLE=My App
+SECRET_KEY=never-exposed  // Not prefixed, server-only
+
+// Usage in code
+const apiUrl = import.meta.env.VITE_API_URL;
+const isDev = import.meta.env.DEV;
+const isProd = import.meta.env.PROD;
+const mode = import.meta.env.MODE;  // 'development' | 'production'
+```
+
+### Testing with Vitest (Vite-Native)
+```typescript
+// vitest.config.ts — inherits from vite.config.ts automatically
+import { defineConfig } from 'vitest/config';
+import react from '@vitejs/plugin-react-swc';
+
+export default defineConfig({
+  plugins: [react()],
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './src/test/setup.ts',
+    css: true,
+    coverage: {
+      provider: 'v8',
+      reporter: ['text', 'html'],
+    },
+  },
+});
+
+// src/test/setup.ts
+import '@testing-library/jest-dom/vitest';
+
+// Component test example
+import { render, screen, fireEvent } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+import { Counter } from './Counter';
+
+describe('Counter', () => {
+  it('increments count on click', () => {
+    render(<Counter />);
+    fireEvent.click(screen.getByRole('button', { name: /increment/i }));
+    expect(screen.getByText('1')).toBeInTheDocument();
+  });
+});
+```
 
 ## Claude 4.x Frontend Development Capabilities
 
