@@ -843,3 +843,90 @@ export default defineConfig({
   }
 }
 ```
+
+## Long-Running Development Best Practices
+
+### Session Startup Routine
+When continuing work across multiple context windows:
+1. **Orient yourself**: Run `pwd`, read `claude-progress.txt`, review `git log --oneline -20`
+2. **Check feature status**: Read `tests.json` or feature list to understand current state
+3. **Start environment**: Run `init.sh` or equivalent to start development servers
+4. **Verify baseline**: Run `npm run build` to ensure Tailwind is compiling without errors
+5. **Choose next feature**: Select highest-priority incomplete feature from list
+
+### Incremental Development Approach
+- **Work on ONE styling task at a time** from the feature list
+- **Complete features fully** before moving to next (implement tokens, style components, test themes, document)
+- **Commit frequently** with descriptive messages after each completed feature
+- **Update progress files** (tests.json, claude-progress.txt) at the end of each feature
+- **Test across breakpoints and themes** before marking feature as done
+- **Never remove or edit test definitions** — only change pass/fail status
+
+### State Management Across Sessions
+- **Git as source of truth**: Use commit history to understand what was done
+- **Structured state**: Use JSON files (tests.json) for feature tracking with clear schema
+- **Freeform notes**: Use text files (claude-progress.txt) for context and decisions
+- **Init scripts**: Maintain init.sh to eliminate session startup friction
+- **Progress documentation**: Document what was done and what's next at end of each session
+
+### Tailwind-Specific Design Guidelines
+
+#### Avoiding Generic AI Aesthetics
+To create distinctive, creative designs that feel intentional and crafted:
+
+**Color System**: Commit to a cohesive palette using oklch for perceptually uniform colors. Dominant primary with sharp accents outperforms timid, evenly-distributed palettes. Draw from brand identity, cultural aesthetics, or nature-inspired palettes — not default Tailwind colors.
+
+**Typography**: Choose fonts that elevate the design. Pair a distinctive display font with a clean body font. Use `@theme` to define a purposeful typography scale with proper line heights. Avoid defaulting to Inter/system-ui for every project.
+
+**Spacing & Rhythm**: Use consistent spacing tokens from `@theme`. Establish a visual rhythm with your spacing scale — not random padding values. White space is a design tool, not empty space.
+
+**Dark Mode**: Dark mode is not "invert everything". Design dark themes intentionally — reduce contrast slightly, shift surface colors to warm or cool tints, and adjust shadows to glows. Use oklch to maintain chroma consistency across light/dark.
+
+**Avoid clichés**:
+- Default Tailwind color palette without customization (`blue-500`, `gray-900`)
+- Identical spacing/sizing on every element
+- Using only viewport breakpoints when container queries would be more appropriate
+- Generic card-grid layouts without visual hierarchy
+- Inconsistent use of design tokens (mixing hardcoded values with `@theme` tokens)
+
+#### Code Quality and Exploration
+**Investigate before implementing**:
+- ALWAYS read and understand relevant CSS files, `@theme` configurations, and existing utility patterns before proposing changes
+- Do not speculate about which Tailwind classes or tokens exist — inspect the actual configuration
+- If the user references a specific file/path, you MUST open and inspect it before explaining or proposing fixes
+- Be rigorous in searching for existing custom utilities before creating new ones
+- Thoroughly review the design token structure and naming conventions before adding new tokens
+
+**Avoid over-engineering**:
+- Only make changes that are directly requested or clearly necessary
+- Keep solutions simple and focused
+- Don't add design tokens, custom utilities, or theme extensions beyond what's asked
+- A styling fix doesn't need surrounding CSS cleaned up
+- A simple component doesn't need every possible variant defined upfront
+- Don't create `@utility` definitions for one-time patterns — just use inline utility classes
+- Don't design for hypothetical future themes or breakpoints
+- The right amount of complexity is the minimum needed for the current task
+- Three repeated utility classes are better than a premature `@utility` abstraction
+
+### Context Window Optimization
+- **Parallel tool execution**: When reading multiple CSS files, component files, and config files, execute them in parallel for efficiency
+- **Efficient file operations**: Use read/edit tools for file operations instead of bash commands
+- **Token budget awareness**: If context management is available, work persistently until features are complete rather than stopping early
+- **Save state before limits**: As context approaches limits, commit progress and update state files
+
+## Claude 4.x Tailwind Development Capabilities
+
+**Extended thinking for complex design decisions**:
+- "Think hard about the optimal design token architecture for this design system"
+- "Think harder about the theme switching strategy — class-based vs data-attribute vs media query"
+- "Ultrathink about how to structure `@theme` tokens for a white-label product with 5+ brand themes"
+
+**Parallel Tailwind development**:
+- Read CSS entry point, component files, and design mockups simultaneously
+- Review `@theme` tokens, `@custom-variant` definitions, and component usage in parallel
+- Analyze multiple component styling patterns and their responsive/theme behavior concurrently
+
+**Multi-source Tailwind synthesis**:
+- Combine design token specs, existing `@theme` configuration, and component requirements
+- Cross-reference Tailwind class usage across multiple component files for consistency auditing
+- Analyze bundle size reports, Lighthouse scores, and design token coverage simultaneously
